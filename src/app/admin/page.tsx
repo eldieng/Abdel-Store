@@ -634,7 +634,7 @@ export default function AdminPage() {
                     <span
                       className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${
                         product.inStock
-                          ? "bg-abdel-gold/10 text-abdelstore-blue"
+                          ? "bg-abdel-gold/10 text-abdel-gold"
                           : "bg-red-100 text-red-700"
                       }`}
                     >
@@ -738,7 +738,7 @@ export default function AdminPage() {
                       <span
                         className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                           product.inStock
-                            ? "bg-abdel-gold/10 text-abdelstore-blue"
+                            ? "bg-abdel-gold/10 text-abdel-gold"
                             : "bg-red-100 text-red-700"
                         }`}
                       >

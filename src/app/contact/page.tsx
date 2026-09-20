@@ -22,7 +22,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Banner */}
-      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-16 md:py-20">
+      <section className="bg-gradient-to-r from-black to-abdel-soft text-white py-16 md:py-20">
         <div className="container-custom px-4 md:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Contact Abdel Store — Dakar
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-abdelstore-blue p-6 rounded-2xl text-white">
+              <div className="bg-abdel-card border border-abdel-gold/40 p-6 rounded-2xl text-white">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-abdel-card/20 rounded-full flex items-center justify-center shrink-0">
                     <MessageCircle size={20} />
@@ -97,7 +97,7 @@ export default function ContactPage() {
                       href="https://wa.me/221772958443"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-abdel-card text-abdelstore-blue px-4 py-2 rounded-full text-sm font-semibold hover:bg-abdel-gold/10 transition-colors"
+                      className="inline-flex items-center gap-2 bg-abdel-card text-abdel-gold px-4 py-2 rounded-full text-sm font-semibold hover:bg-abdel-gold/10 transition-colors"
                     >
                       <MessageCircle size={16} />
                       Écrire sur WhatsApp
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 </h2>
 
                 {sent && (
-                  <div className="bg-abdel-gold/10 border border-abdel-gold/20 text-abdelstore-blue p-4 rounded-xl mb-6">
+                  <div className="bg-abdel-gold/10 border border-abdel-gold/20 text-abdel-gold p-4 rounded-xl mb-6">
                     Merci pour votre message ! Nous vous répondrons dans les
                     plus brefs délais.
                   </div>

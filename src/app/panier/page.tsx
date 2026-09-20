@@ -83,7 +83,7 @@ export default function PanierPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-12">
+      <section className="bg-gradient-to-r from-black to-abdel-soft text-white py-12">
         <div className="container-custom px-4 md:px-8">
           <h1 className="text-3xl md:text-4xl font-bold">
             Mon Panier
@@ -205,7 +205,7 @@ export default function PanierPage() {
 
                 <button
                   onClick={handleOrder}
-                  className="w-full bg-abdelstore-blue hover:bg-abdelstore-blue-dark text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors mb-3"
+                  className="w-full bg-abdel-gold hover:bg-abdel-goldDark text-black py-3 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors mb-3"
                 >
                   <MessageCircle size={18} />
                   Commander via WhatsApp

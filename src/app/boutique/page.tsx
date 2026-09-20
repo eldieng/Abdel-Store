@@ -27,7 +27,7 @@ export default function BoutiquePage() {
   return (
     <>
       {/* Banner */}
-      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-16 md:py-20">
+      <section className="bg-gradient-to-r from-black to-abdel-soft text-white py-16 md:py-20">
         <div className="container-custom px-4 md:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Notre Boutique

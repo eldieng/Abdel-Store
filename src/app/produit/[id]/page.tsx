@@ -207,8 +207,8 @@ export default function ProductPage() {
                         onClick={() => setSelectedVariant(variant)}
                         className={`px-5 py-2.5 rounded-full border-2 text-sm font-semibold transition-all ${
                           selectedVariant?.weight === variant.weight
-                            ? "border-abdelstore-blue bg-abdelstore-blue text-white shadow-md"
-                            : "border-abdel-gold/20 bg-abdel-card text-white hover:border-abdelstore-blue hover:bg-abdelstore-blue/5"
+                            ? "border-abdel-gold bg-abdel-gold text-black shadow-md"
+                            : "border-abdel-gold/20 bg-abdel-card text-white hover:border-abdel-gold hover:bg-abdel-gold/5"
                         }`}
                       >
                         {variant.weight} — {formatPrice(variant.price)}
@@ -265,8 +265,8 @@ export default function ProductPage() {
                     onClick={handleAddToCart}
                     className={`flex-1 py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${
                       added
-                        ? "bg-abdelstore-blue text-white"
-                        : "bg-abdelstore-blue text-white hover:bg-abdelstore-blue-dark"
+                        ? "bg-abdel-gold text-black"
+                        : "bg-abdel-gold text-black hover:bg-abdel-goldDark"
                     }`}
                   >
                     {added ? (
@@ -294,7 +294,7 @@ export default function ProductPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 bg-abdelstore-blue text-white hover:bg-abdelstore-blue-dark transition-colors shadow-md"
+                  className="w-full py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 bg-abdel-gold text-black hover:bg-abdel-goldDark transition-colors shadow-md"
                 >
                   <MessageCircle size={18} />
                   Commander sur WhatsApp

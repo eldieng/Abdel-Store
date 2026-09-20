@@ -39,11 +39,6 @@ const config: Config = {
         sand: "#2A2A2A",
         bark: "#F5F5F5",
         leaf: "#F1BA46",
-        abdelstore: {
-          blue: "#DAA43E",
-          black: "#000000",
-          soft: "#141414",
-        },
         abdel: {
           gold: "#DAA43E",
           goldLight: "#F1BA46",
