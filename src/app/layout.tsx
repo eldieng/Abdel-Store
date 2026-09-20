@@ -153,7 +153,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} font-body antialiased bg-black text-white`}>
         <Header />
-        <main className="min-h-screen pt-16">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

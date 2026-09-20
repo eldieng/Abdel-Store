@@ -51,35 +51,35 @@ export default function BoutiquePage() {
       </section>
 
       {/* Filters */}
-      <section className="bg-abdel-card sticky top-16 z-30 border-b shadow-black/40">
+      <section className="bg-black sticky top-0 z-30 border-b border-abdel-gold/30 shadow-lg shadow-black/40">
         <div className="container-custom px-4 md:px-8 py-4">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             {/* Search */}
             <div className="relative w-full sm:w-80">
               <Search
                 size={18}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-abdel-gold/70"
               />
               <input
                 type="text"
                 placeholder="Rechercher un produit..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 border border-abdel-gold/20 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                className="w-full pl-10 pr-4 py-2.5 bg-abdel-card border border-abdel-gold/30 rounded-xl text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold"
               />
             </div>
 
             {/* Categories */}
             <div className="flex items-center gap-2 overflow-x-auto pb-1">
-              <SlidersHorizontal size={16} className="text-gray-400 shrink-0" />
+              <SlidersHorizontal size={16} className="text-abdel-gold shrink-0" />
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setCategory(cat)}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  className={`px-4 py-1.5 rounded-xl text-sm font-medium whitespace-nowrap transition-colors border ${
                     category === cat
-                      ? "bg-primary text-white"
-                      : "bg-gray-100 text-white/70 hover:bg-gray-200"
+                      ? "bg-abdel-gold text-black border-abdel-gold"
+                      : "bg-abdel-card text-white border-abdel-gold/30 hover:border-abdel-gold hover:text-abdel-gold"
                   }`}
                 >
                   {cat}

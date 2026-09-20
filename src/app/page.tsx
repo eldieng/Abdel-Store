@@ -25,14 +25,14 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-abdelstore-soft via-white to-primary-50 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-black via-abdel-soft to-abdel-card overflow-hidden">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <div className="absolute top-10 right-0 w-80 h-80 bg-abdel-gold/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl" />
         </div>
 
-        <div className="container-custom px-4 md:px-8 py-20 md:py-28 relative">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container-custom px-4 md:px-8 py-10 md:py-14 relative">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 bg-abdel-gold/10 text-abdel-gold px-4 py-2 rounded-full text-sm font-semibold">
                 <Zap size={16} />
