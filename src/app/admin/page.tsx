@@ -131,7 +131,7 @@ export default function AdminPage() {
   // Login Screen
   if (!isLoggedIn) {
     return (
-      <section className="min-h-[80vh] flex items-center justify-center bg-abdel-soft">
+      <section className="min-h-[80vh] flex items-center justify-center bg-black">
         <div className="bg-abdel-card p-8 rounded-2xl shadow-lg max-w-md w-full mx-4">
           <div className="text-center mb-6">
             <div className="w-16 h-16 bg-abdel-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -146,21 +146,21 @@ export default function AdminPage() {
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-600 p-3 rounded-xl text-sm mb-4">
+            <div className="bg-red-500/10 border border-red-500/40 text-red-400 p-3 rounded-xl text-sm mb-4">
               {error}
             </div>
           )}
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                 Mot de passe
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold"
+                className="w-full px-4 py-3 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-white placeholder:text-white/40"
                 placeholder="Entrez le mot de passe"
                 required
               />
@@ -178,7 +178,7 @@ export default function AdminPage() {
   // Product Edit Form
   if (editingProduct) {
     return (
-      <section className="bg-abdel-soft min-h-screen">
+      <section className="bg-black min-h-screen">
         <div className="bg-abdel-card border-b sticky top-0 z-30">
           <div className="container-custom px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
             <h1 className="text-sm md:text-xl font-bold text-white truncate pr-2">
@@ -189,7 +189,7 @@ export default function AdminPage() {
                 setEditingProduct(null);
                 setIsCreating(false);
               }}
-              className="text-white/55 hover:text-gray-700 p-2 shrink-0"
+              className="text-white/55 hover:text-abdel-gold p-2 shrink-0"
             >
               <X size={20} />
             </button>
@@ -207,12 +207,12 @@ export default function AdminPage() {
             >
               {/* IMAGE UPLOAD */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-abdel-gold mb-2">
                   Photo du produit
                 </label>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
                   {/* Preview */}
-                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-xl sm:rounded-2xl overflow-hidden bg-sand border-2 border-dashed border-gray-300 shrink-0">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-xl sm:rounded-2xl overflow-hidden bg-black border-2 border-dashed border-abdel-gold/40 shrink-0">
                     {editingProduct.image ? (
                       <Image
                         src={editingProduct.image}
@@ -264,7 +264,7 @@ export default function AdminPage() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                     Nom du produit *
                   </label>
                   <input
@@ -274,12 +274,12 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, name: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                    className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                     placeholder="ex: Oraimo SpaceBud"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                     Sous-titre
                   </label>
                   <input
@@ -288,7 +288,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, subtitle: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                    className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                     placeholder="ex: Écouteurs sans fil ANC"
                   />
                 </div>
@@ -296,7 +296,7 @@ export default function AdminPage() {
 
               <div className="grid sm:grid-cols-3 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                     Prix (FCFA) *
                   </label>
                   <input
@@ -309,12 +309,12 @@ export default function AdminPage() {
                         price: parseInt(e.target.value) || 0,
                       })
                     }
-                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                    className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                     placeholder="ex: 2000"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                     Poids *
                   </label>
                   <input
@@ -324,12 +324,12 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, weight: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                    className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                     placeholder="ex: 200g"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                     Catégorie
                   </label>
                   <input
@@ -338,14 +338,14 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, category: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                    className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                     placeholder="ex: Audio"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                   Description courte
                 </label>
                 <textarea
@@ -354,13 +354,13 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, description: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
+                  className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40 resize-none"
                   placeholder="Courte description pour la carte produit"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                   Description longue
                 </label>
                 <textarea
@@ -372,13 +372,13 @@ export default function AdminPage() {
                       longDescription: e.target.value,
                     })
                   }
-                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
+                  className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40 resize-none"
                   placeholder="Description détaillée pour la page produit"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-abdel-gold mb-1.5">
                   Mode d&apos;emploi
                 </label>
                 <textarea
@@ -387,13 +387,13 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, usage: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
+                  className="w-full px-4 py-2.5 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40 resize-none"
                   placeholder="Comment utiliser ce produit"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-abdel-gold mb-2">
                   Bienfaits
                 </label>
                 {editingProduct.benefits.map((benefit, i) => (
@@ -406,7 +406,7 @@ export default function AdminPage() {
                         newBenefits[i] = e.target.value;
                         setEditingProduct({ ...editingProduct, benefits: newBenefits });
                       }}
-                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                      className="flex-1 px-4 py-2 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                       placeholder="Un bienfait du produit..."
                     />
                     <button
@@ -417,7 +417,7 @@ export default function AdminPage() {
                         );
                         setEditingProduct({ ...editingProduct, benefits: newBenefits });
                       }}
-                      className="text-red-400 hover:text-red-600 p-2"
+                      className="text-red-400 hover:text-red-300 p-2"
                     >
                       <X size={16} />
                     </button>
@@ -440,7 +440,7 @@ export default function AdminPage() {
 
               {/* Variantes poids / prix */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-abdel-gold mb-2">
                   Variantes (poids / prix)
                 </label>
                 {(editingProduct.variants || []).map((variant, i) => (
@@ -453,7 +453,7 @@ export default function AdminPage() {
                         newVariants[i] = { ...newVariants[i], weight: e.target.value };
                         setEditingProduct({ ...editingProduct, variants: newVariants });
                       }}
-                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                      className="flex-1 px-4 py-2 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                       placeholder="ex: 200g"
                     />
                     <input
@@ -464,7 +464,7 @@ export default function AdminPage() {
                         newVariants[i] = { ...newVariants[i], price: parseInt(e.target.value) || 0 };
                         setEditingProduct({ ...editingProduct, variants: newVariants });
                       }}
-                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
+                      className="flex-1 px-4 py-2 bg-black border border-abdel-gold/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold text-sm text-white placeholder:text-white/40"
                       placeholder="Prix en FCFA"
                     />
                     <button
@@ -473,7 +473,7 @@ export default function AdminPage() {
                         const newVariants = (editingProduct.variants || []).filter((_, idx) => idx !== i);
                         setEditingProduct({ ...editingProduct, variants: newVariants });
                       }}
-                      className="text-red-400 hover:text-red-600 p-2"
+                      className="text-red-400 hover:text-red-300 p-2"
                     >
                       <X size={16} />
                     </button>
@@ -502,9 +502,9 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, inStock: e.target.checked })
                   }
-                  className="w-4 h-4 text-abdel-gold rounded"
+                  className="w-4 h-4 accent-abdel-gold rounded bg-black border-abdel-gold"
                 />
-                <label htmlFor="inStock" className="text-sm text-gray-700">
+                <label htmlFor="inStock" className="text-sm text-white/80">
                   En stock
                 </label>
               </div>
@@ -542,7 +542,7 @@ export default function AdminPage() {
 
   // Dashboard
   return (
-    <section className="bg-abdel-soft min-h-screen">
+    <section className="bg-black min-h-screen">
       {/* Admin Header */}
       <div className="bg-abdel-card border-b sticky top-0 z-30">
         <div className="container-custom px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
@@ -592,7 +592,7 @@ export default function AdminPage() {
           </div>
           <div className="bg-abdel-card p-4 md:p-5 rounded-xl md:rounded-2xl shadow-black/40 border border-abdel-gold/20">
             <p className="text-xs md:text-sm text-white/55">Prix moyen</p>
-            <p className="text-xl md:text-2xl font-bold text-secondary">
+            <p className="text-xl md:text-2xl font-bold text-abdel-gold">
               {products.length > 0
                 ? formatPrice(
                     Math.round(
@@ -634,15 +634,15 @@ export default function AdminPage() {
                     <span
                       className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${
                         product.inStock
-                          ? "bg-abdel-gold/10 text-abdel-gold"
-                          : "bg-red-100 text-red-700"
+                          ? "bg-abdel-gold/15 text-abdel-gold"
+                          : "bg-red-500/15 text-red-400"
                       }`}
                     >
                       {product.inStock ? "En stock" : "Rupture"}
                     </span>
                   </div>
                   <div className="flex items-center gap-3 mt-2">
-                    <span className="font-bold text-secondary text-sm">
+                    <span className="font-bold text-abdel-gold text-sm">
                       {formatPrice(product.price)}
                     </span>
                     <span className="text-xs text-gray-400">{product.weight}</span>
@@ -662,7 +662,7 @@ export default function AdminPage() {
                 </button>
                 <button
                   onClick={() => handleDeleteProduct(product.id)}
-                  className="text-red-400 hover:text-red-600 p-2 hover:bg-red-50 rounded-lg transition-colors"
+                  className="text-red-400 hover:text-red-300 p-2 hover:bg-red-500/10 rounded-lg transition-colors"
                   title="Supprimer"
                 >
                   <Trash2 size={16} />
@@ -676,7 +676,7 @@ export default function AdminPage() {
         <div className="hidden md:block bg-abdel-card rounded-2xl shadow-black/40 overflow-hidden border border-abdel-gold/20">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-sand/50 border-b border-abdel-gold/20">
+              <thead className="bg-black/60 border-b border-abdel-gold/20">
                 <tr>
                   <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Produit
@@ -698,9 +698,9 @@ export default function AdminPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-sand">
+              <tbody className="divide-y divide-abdel-gold/15">
                 {products.map((product) => (
-                  <tr key={product.id} className="hover:bg-abdel-soft/50">
+                  <tr key={product.id} className="hover:bg-abdel-gold/5">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
                         <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-abdel-gold/20">
@@ -727,7 +727,7 @@ export default function AdminPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4">
-                      <span className="font-semibold text-secondary text-sm">
+                      <span className="font-semibold text-abdel-gold text-sm">
                         {formatPrice(product.price)}
                       </span>
                     </td>
@@ -738,8 +738,8 @@ export default function AdminPage() {
                       <span
                         className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                           product.inStock
-                            ? "bg-abdel-gold/10 text-abdel-gold"
-                            : "bg-red-100 text-red-700"
+                            ? "bg-abdel-gold/15 text-abdel-gold"
+                            : "bg-red-500/15 text-red-400"
                         }`}
                       >
                         {product.inStock ? "En stock" : "Rupture"}
@@ -756,7 +756,7 @@ export default function AdminPage() {
                         </button>
                         <button
                           onClick={() => handleDeleteProduct(product.id)}
-                          className="text-red-400 hover:text-red-600 p-2 hover:bg-red-50 rounded-lg transition-colors"
+                          className="text-red-400 hover:text-red-300 p-2 hover:bg-red-500/10 rounded-lg transition-colors"
                           title="Supprimer"
                         >
                           <Trash2 size={16} />
