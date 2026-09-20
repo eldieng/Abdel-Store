@@ -1,0 +1,387 @@
+[
+  {
+    "id": "montre-noire-milanais",
+    "name": "Montre connectée Black Mesh",
+    "subtitle": "Noir · Bracelet milanais inox + silicone offert",
+    "description": "Montre connectée noire au look premium : bracelet mesh en acier inoxydable, écran HD et un bracelet silicone offert pour varier les styles. Suivi d’activité, notifications et autonomie pour le quotidien à Dakar.",
+    "longDescription": "La Montre connectée Black Mesh allie élégance et praticité. Son boîtier noir et son bracelet milanais en acier inoxydable conviennent aussi bien au bureau qu’en sortie. Un bracelet silicone supplémentaire est inclus (cadeau) pour le sport ou un look plus casual.\n\nÉcran tactile, cadrans personnalisables, suivi des pas et des notifications smartphone (appels, messages). Parfaite pour ceux qui veulent une montre connectée stylée sans se ruiner — prix à confirmer avec le propriétaire.",
+    "benefits": [
+      "Bracelet milanais inox inclus",
+      "Bracelet silicone offert (cadeau)",
+      "Notifications smartphone",
+      "Suivi d’activité (pas, etc.)",
+      "Design premium noir"
+    ],
+    "usage": "Chargez la montre avant la première utilisation. Installez l’application compagnon, activez le Bluetooth et associez l’appareil. Ajustez le bracelet milanais ou changez pour le silicone selon l’occasion.",
+    "price": 3500,
+    "weight": "1 unité",
+    "image": "/images/montre-noire-milanais.jpeg",
+    "category": "Montres",
+    "badge": "Cadeau inclus",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 2000
+      },
+      {
+        "weight": "Pack cadeau",
+        "price": 3500
+      },
+      {
+        "weight": "Pack premium",
+        "price": 8000
+      }
+    ]
+  },
+  {
+    "id": "montre-or-milanais",
+    "name": "Montre connectée Gold Mesh",
+    "subtitle": "Or · Bracelet milanais doré + silicone offert",
+    "description": "Montre connectée finition or avec bracelet mesh doré et bracelet silicone beige offert. Style fashion, suivi fitness (pas, calories, distance) et écran digital clair — idéale pour un look chic au quotidien.",
+    "longDescription": "La Montre connectée Gold Mesh se démarque par sa finition dorée et son bracelet milanais assorti. L’écran affiche l’heure, la date et des indicateurs d’activité (pas, distance, calories). Un bracelet silicone beige est offert pour un second style plus décontracté.\n\nC’est le modèle « fashion » de la gamme : parfait en cadeau ou pour compléter une tenue élégante. Compatible smartphone via Bluetooth et application compagnon.",
+    "benefits": [
+      "Finition or premium",
+      "Bracelet silicone beige offert",
+      "Suivi pas, calories et distance",
+      "Écran tactile digital",
+      "Look fashion & cadeau idéal"
+    ],
+    "usage": "Associez la montre à votre smartphone via l’app. Utilisez le bracelet milanais au quotidien et le silicone pour le sport ou les weekends. Chargez régulièrement selon l’autonomie indiquée dans l’app.",
+    "price": 2500,
+    "weight": "1 unité",
+    "image": "/images/montre-or-milanais.jpeg",
+    "category": "Montres",
+    "badge": "Cadeau inclus",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1500
+      },
+      {
+        "weight": "Pack cadeau",
+        "price": 2500
+      },
+      {
+        "weight": "Pack premium",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "montre-noire-silicone",
+    "name": "Montre connectée Black Sport",
+    "subtitle": "Noir · Bracelet silicone sport",
+    "description": "Montre connectée tout noir avec bracelet silicone souple et boucle métallique. Légère, confortable et pensée pour le sport comme pour la ville — écran moderne et suivi d’activité.",
+    "longDescription": "La Montre connectée Black Sport mise sur la simplicité et le confort. Bracelet silicone ajustable, boîtier noir mat/brillant selon les reflets, et cadran analogique moderne à l’écran.\n\nIdéale si vous voulez une montre connectée discrète, facile à porter sous la pluie légère ou à la salle, sans le look « métal ». Synchronisez-la avec votre téléphone pour les notifications et le suivi d’activité.",
+    "benefits": [
+      "Bracelet silicone confortable",
+      "Design sport tout noir",
+      "Légère au poignet",
+      "Suivi d’activité",
+      "Polyvalente sport & quotidien"
+    ],
+    "usage": "Ajustez le bracelet à votre poignet. Activez le Bluetooth et liez la montre à l’application. Pour le sport, serrez légèrement le bracelet ; pour la ville, un réglage plus souple suffit.",
+    "price": 2500,
+    "weight": "1 unité",
+    "image": "/images/montre-noire-silicone.jpeg",
+    "category": "Montres",
+    "badge": "Nouveau",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1500
+      },
+      {
+        "weight": "Pack cadeau",
+        "price": 2500
+      },
+      {
+        "weight": "Pack premium",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-openbuds-noir",
+    "name": "Oraimo OpenBuds — Noir",
+    "subtitle": "Écouteurs open-ear sans fil · Étui inclus",
+    "description": "Écouteurs Oraimo open-ear noirs : port autour de l’oreille (pont en C), sans bloquer le conduit auditif. Vous restez attentif à la rue tout en écoutant musique ou appels. Étui de charge matte inclus.",
+    "longDescription": "Les Oraimo OpenBuds noirs adoptent un design open-ear : les écouteurs se placent autour de l’oreille plutôt qu’à l’intérieur. Résultat : confort sur de longues sessions, moins de fatigue, et conscience de l’environnement (idéal en ville, en scooter ou au bureau).\n\nÉtui de charge compact avec bande champagne et logo oraimo. Connexion Bluetooth, commandes sur les écouteurs selon le modèle. Un choix malin si les intra classiques vous gênent.",
+    "benefits": [
+      "Design open-ear (confort longue durée)",
+      "Restez conscient de votre environnement",
+      "Bluetooth sans fil",
+      "Étui de charge inclus",
+      "Marque Oraimo"
+    ],
+    "usage": "Sortez les écouteurs de l’étui, placez le pont autour de chaque oreille, allumez et connectez via Bluetooth. Rangez-les dans l’étui pour les recharger entre deux utilisations.",
+    "price": 2000,
+    "weight": "1 paire",
+    "image": "/images/oraimo-openbuds-noir.jpeg",
+    "category": "Audio",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1200
+      },
+      {
+        "weight": "Pack",
+        "price": 2000
+      },
+      {
+        "weight": "Pack duo",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-openbuds-beige",
+    "name": "Oraimo OpenBuds — Beige",
+    "subtitle": "Écouteurs open-ear crème · Étui assorti",
+    "description": "Même confort open-ear Oraimo, en finition beige/crème élégante. Étui assorti avec bande champagne. Parfaits pour un look clair et discret au quotidien.",
+    "longDescription": "Version beige des Oraimo OpenBuds : même principe open-ear (pont en C), même liberté d’entendre ce qui se passe autour de vous, avec une esthétique plus claire et douce.\n\nIdéals si vous voulez un accessoire audio qui se fond dans une tenue claire ou un setup « clean ». Étui de charge inclus, connexion Bluetooth, usage musique / appels / podcasts.",
+    "benefits": [
+      "Finition beige/crème élégante",
+      "Confort open-ear",
+      "Sans fil Bluetooth",
+      "Étui de charge assorti",
+      "Marque Oraimo"
+    ],
+    "usage": "Placez les écouteurs autour des oreilles, connectez en Bluetooth. Rechargez dans l’étui fourni. Évitez l’eau ; essuyez légèrement en cas de transpiration.",
+    "price": 2000,
+    "weight": "1 paire",
+    "image": "/images/oraimo-openbuds-beige.jpeg",
+    "category": "Audio",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1200
+      },
+      {
+        "weight": "Pack",
+        "price": 2000
+      },
+      {
+        "weight": "Pack duo",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-spacebud",
+    "name": "Oraimo SpaceBud",
+    "subtitle": "Intra-auriculaires · ANC + Spatial Audio",
+    "description": "Écouteurs Oraimo SpaceBud stéréo sans fil : réduction de bruit active (ANC), Spatial Audio, embouts silicone et étui de charge. Immersion pour musique, films et appels.",
+    "longDescription": "Les Oraimo SpaceBud sont des écouteurs intra-auriculaires à tige (stem), pensés pour une écoute immersive. ANC pour atténuer le bruit ambiant (bus, bureau, rue), Spatial Audio pour une sensation plus large, et contrôles tactiles sur les tiges.\n\nÉtui de charge crème, embouts silicone pour un bon maintien. Choisissez-les si vous voulez vous isoler un peu plus que avec des open-ear, tout en restant sur une marque Oraimo connue.",
+    "benefits": [
+      "Réduction de bruit ANC",
+      "Spatial Audio",
+      "Stéréo sans fil Bluetooth",
+      "Contrôles tactiles",
+      "Étui de charge inclus"
+    ],
+    "usage": "Choisissez la taille d’embout adaptée, insérez correctement, puis connectez en Bluetooth. Activez l’ANC via l’app ou les commandes tactiles selon le modèle. Rangez toujours dans l’étui pour recharger.",
+    "price": 3500,
+    "weight": "1 paire",
+    "image": "/images/oraimo-spacebud.jpeg",
+    "category": "Audio",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 2000
+      },
+      {
+        "weight": "Pack",
+        "price": 3500
+      },
+      {
+        "weight": "Pack duo",
+        "price": 8000
+      }
+    ]
+  },
+  {
+    "id": "oraimo-chargeur-usb-c",
+    "name": "Chargeur mural Oraimo USB-C",
+    "subtitle": "Adaptateur EU + câble · Kit quotidien",
+    "description": "Kit de charge Oraimo : adaptateur mural blanc USB-C (prise européenne) et câble. Compact, fiable pour smartphones, écouteurs et accessoires au quotidien.",
+    "longDescription": "Un indispensable de bureau ou de chevet : l’adaptateur Oraimo USB-C avec prise EU (deux broches) et son câble. Design blanc sobre, format compact pour le sac ou le voyage dans la sous-région.\n\nUtile pour recharger téléphone, écouteurs, montre ou power bank. Simple, sans fioritures — la base d’un setup de charge propre.",
+    "benefits": [
+      "Marque Oraimo",
+      "Port USB-C",
+      "Prise européenne (Sénégal)",
+      "Câble inclus",
+      "Format compact"
+    ],
+    "usage": "Branchez l’adaptateur sur une prise murale, connectez le câble à votre appareil. Ne couvrez pas le chargeur pendant l’utilisation ; débranchez si trop chaud.",
+    "price": 2500,
+    "weight": "1 kit",
+    "image": "/images/oraimo-chargeur-usb-c.jpeg",
+    "category": "Chargeurs",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Adaptateur seul",
+        "price": 1500
+      },
+      {
+        "weight": "Kit complet",
+        "price": 2500
+      },
+      {
+        "weight": "Pack 2 kits",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-powercube-201",
+    "name": "Oraimo PowerCube 201",
+    "subtitle": "20W Rapid Charge · Dual USB-C / USB-A",
+    "description": "Chargeur mural Oraimo PowerCube 201 : 20W Rapid Charge, double port USB-C + USB-A, compatible PD20 & QC4.0, AniFast pour iOS. 5 couches de sécurité, garantie 365 jours.",
+    "longDescription": "Le PowerCube 201 (réf. OCW-S92D-L53) est un chargeur mural dual-port pour charger deux appareils en même temps. 20W Rapid Charge, PD20 & QC4.0, et AniFast™ pour les appareils iOS. Prise EU.\n\nPensé pour la sécurité (5 couches) avec une garantie annoncée de 365 jours par le fabricant. Idéal à la maison ou au bureau si vous jugglez téléphone + écouteurs / tablette.",
+    "benefits": [
+      "Charge rapide 20W",
+      "2 ports : USB-C + USB-A",
+      "PD20 & QC4.0",
+      "AniFast pour iOS",
+      "Garantie 365 jours"
+    ],
+    "usage": "Branchez sur une prise EU. Utilisez USB-C ou USB-A selon votre câble. Pour la charge la plus rapide, privilégiez un câble compatible et un seul appareil gourmand à la fois sur le port principal.",
+    "price": 2500,
+    "weight": "1 unité",
+    "image": "/images/oraimo-powercube-201.jpeg",
+    "category": "Chargeurs",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1500
+      },
+      {
+        "weight": "Pack",
+        "price": 2500
+      },
+      {
+        "weight": "Pack duo",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-powerbank-ecran",
+    "name": "Power bank Oraimo DigiDisplay",
+    "subtitle": "Banque d’alimentation · Écran % + dragonne",
+    "description": "Power bank Oraimo avec écran digital du pourcentage de batterie. Design bicolore, dragonne AniFast — sachez exactement combien il reste avant de sortir.",
+    "longDescription": "Fini les mauvaises surprises : l’écran LED affiche le niveau de charge du power bank en pourcentage. Finition glossy / matte, format de poche avec dragonne pour le transporter facilement.\n\nRechargez smartphones et accessoires en déplacement (réunions, trajets, weekends). Chargez d’abord le power bank à fond, puis branchez votre appareil via câble USB.",
+    "benefits": [
+      "Écran % de batterie",
+      "Dragonne de transport",
+      "Format portable",
+      "Marque Oraimo",
+      "Idéal en déplacement"
+    ],
+    "usage": "Chargez le power bank jusqu’à 100 %. Connectez votre téléphone avec un câble compatible. Surveillez le % sur l’écran. Évitez la chaleur excessive (voiture au soleil).",
+    "price": 2000,
+    "weight": "1 unité",
+    "image": "/images/oraimo-powerbank-ecran.jpeg",
+    "category": "Power Banks",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1200
+      },
+      {
+        "weight": "Pack",
+        "price": 2000
+      },
+      {
+        "weight": "Pack duo",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-magsafe-gris",
+    "name": "Power bank MagSafe Oraimo — Gris",
+    "subtitle": "10 000 mAh · Charge magnétique sans fil · ~212 g",
+    "description": "Banque d’alimentation magnétique Oraimo 10 000 mAh : se fixe derrière un iPhone compatible, charge sans fil, port USB-C et support intégré. Léger (~212 g), puissance de poche.",
+    "longDescription": "Ce power bank MagSafe gris Oraimo offre 10 000 mAh et une charge magnétique sans fil : alignez-le derrière votre téléphone compatible, c’est parti. Port USB-C pour la charge filaire, kickstand pour regarder une vidéo en chargeant.\n\nEnviron 212 g — assez léger pour le garder dans une poche ou un petit sac. Parfait pour les journées longues hors domicile à Dakar.",
+    "benefits": [
+      "Capacité 10 000 mAh",
+      "Charge magnétique sans fil",
+      "Léger (~212 g)",
+      "Kickstand / support intégré",
+      "Port USB-C"
+    ],
+    "usage": "Fixez magnétiquement derrière un téléphone compatible, ou utilisez un câble USB-C. Déployez le support pour un mode « stand ». Rechargez le power bank via USB-C après usage.",
+    "price": 2000,
+    "weight": "10000 mAh",
+    "image": "/images/oraimo-magsafe-gris.jpeg",
+    "category": "Power Banks",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 1200
+      },
+      {
+        "weight": "Pack",
+        "price": 2000
+      },
+      {
+        "weight": "Pack duo",
+        "price": 4500
+      }
+    ]
+  },
+  {
+    "id": "oraimo-magsafe-blanc",
+    "name": "Power bank MagSafe Oraimo — Blanc",
+    "subtitle": "10 000 mAh · Charge magnétique sans fil",
+    "description": "Même puissance MagSafe 10 000 mAh en finition blanche. Charge sans fil magnétique, USB-C et support — look clean pour iPhone et setup clair.",
+    "longDescription": "Version blanche du power bank magnétique Oraimo 10 000 mAh. Même principe : accroche magnétique, charge sans fil, port USB-C, kickstand. Finition claire qui s’accorde avec les coques et téléphones blancs / argent.\n\nChoisissez le gris ou le blanc selon votre style ; les deux ciblent la même usage « puissance de poche » en mobilité.",
+    "benefits": [
+      "10 000 mAh",
+      "Finition blanche",
+      "Charge magnétique sans fil",
+      "Support intégré",
+      "Portable au quotidien"
+    ],
+    "usage": "Alignez le power bank derrière le téléphone compatible MagSafe, ou chargez en filaire via USB-C. Rechargez le bloc après les journées intensives.",
+    "price": 3500,
+    "weight": "10000 mAh",
+    "image": "/images/oraimo-magsafe-blanc.jpeg",
+    "category": "Power Banks",
+    "badge": "Oraimo",
+    "inStock": true,
+    "variants": [
+      {
+        "weight": "Standard",
+        "price": 2000
+      },
+      {
+        "weight": "Pack",
+        "price": 3500
+      },
+      {
+        "weight": "Pack duo",
+        "price": 8000
+      }
+    ]
+  }
+]
