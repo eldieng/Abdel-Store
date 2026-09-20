@@ -1,6 +1,6 @@
-# Nexora Shop
+# Abdel Store
 
-Boutique high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks.
+Boutique premium high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks.
 
 ## Stack
 
@@ -8,26 +8,19 @@ Boutique high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraim
 - React 18 + TailwindCSS
 - API Routes + `data/products.json`
 
-## Lancer en local
+## Lancer
 
 ```bash
 npm install
 npm run dev
 ```
 
-Ouvre [http://localhost:3000](http://localhost:3000).
-
 ## Charte
 
-- Bleu logo : `#444D9C`
-- Noir : `#0F1117`
-- Fond : `#F5F6FB`
+- Or : `#DAA43E`
+- Noir : `#000000`
+- Fond soft : `#141414`
 
 ## SEO
 
-Config locale Dakar / Sénégal dans `src/lib/seo.ts` (URL prévue : `https://nexora.sn`).
-
-## Notes
-
-- Les prix sont provisoires (à valider par le propriétaire).
-- Email contact provisoire : `contact@nexora.sn`
+Config locale dans `src/lib/seo.ts` (URL prévue : `https://abdelstore.sn`).

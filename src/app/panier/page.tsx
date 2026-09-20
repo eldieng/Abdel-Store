@@ -56,7 +56,7 @@ export default function PanierPage() {
       )
       .join("\n");
     const total = getCartTotal(cart);
-    const fullMessage = `Bonjour Nexora Shop ! Je souhaite commander :\n\n${message}\n\nTotal : ${formatPrice(total)}\n\nMerci !`;
+    const fullMessage = `Bonjour Abdel Store ! Je souhaite commander :\n\n${message}\n\nTotal : ${formatPrice(total)}\n\nMerci !`;
     const encoded = encodeURIComponent(fullMessage);
     window.open(`https://wa.me/?text=${encoded}`, "_blank");
   };
@@ -66,10 +66,10 @@ export default function PanierPage() {
       <section className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center space-y-4">
           <ShoppingCart size={64} className="text-gray-300 mx-auto" />
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-white">
             Votre panier est vide
           </h1>
-          <p className="text-gray-500">
+          <p className="text-white/55">
             Découvrez nos produits naturels et ajoutez-les à votre panier
           </p>
           <Link href="/boutique" className="btn-primary inline-flex">
@@ -83,18 +83,18 @@ export default function PanierPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-nexora-black to-nexora-blue text-white py-12">
+      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-12">
         <div className="container-custom px-4 md:px-8">
           <h1 className="text-3xl md:text-4xl font-bold">
             Mon Panier
           </h1>
-          <p className="text-blue-100 mt-2">
+          <p className="text-abdel-gold/80 mt-2">
             {cart.length} article{cart.length > 1 ? "s" : ""}
           </p>
         </div>
       </section>
 
-      <section className="bg-beige section-padding">
+      <section className="bg-abdel-soft section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Cart Items */}
@@ -102,7 +102,7 @@ export default function PanierPage() {
               {cart.map((item) => (
                 <div
                   key={item.productId}
-                  className="bg-white rounded-2xl p-4 md:p-6 shadow-sm flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+                  className="bg-abdel-card rounded-2xl p-4 md:p-6 shadow-black/40 flex flex-col sm:flex-row gap-4 items-start sm:items-center"
                 >
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0">
                     <Image
@@ -113,8 +113,8 @@ export default function PanierPage() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-gray-800">{item.name}</h3>
-                    <p className="text-sm text-gray-500">{item.weight}</p>
+                    <h3 className="font-bold text-white">{item.name}</h3>
+                    <p className="text-sm text-white/55">{item.weight}</p>
                     <p className="text-secondary font-semibold mt-1">
                       {formatPrice(item.price)}
                     </p>
@@ -141,7 +141,7 @@ export default function PanierPage() {
                         <Plus size={14} />
                       </button>
                     </div>
-                    <span className="font-bold text-gray-800 min-w-[100px] text-right">
+                    <span className="font-bold text-white min-w-[100px] text-right">
                       {formatPrice(item.price * item.quantity)}
                     </span>
                     <button
@@ -173,8 +173,8 @@ export default function PanierPage() {
 
             {/* Summary */}
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-2xl p-6 shadow-sm sticky top-24">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <div className="bg-abdel-card rounded-2xl p-6 shadow-black/40 sticky top-24">
+                <h2 className="text-xl font-bold text-white mb-4">
                   Résumé
                 </h2>
                 <div className="space-y-3 mb-6">
@@ -183,7 +183,7 @@ export default function PanierPage() {
                       key={item.productId}
                       className="flex justify-between text-sm"
                     >
-                      <span className="text-gray-600">
+                      <span className="text-white/70">
                         {item.name} x{item.quantity}
                       </span>
                       <span className="font-medium">
@@ -194,7 +194,7 @@ export default function PanierPage() {
                 </div>
                 <div className="border-t pt-4 mb-6">
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-gray-800">
+                    <span className="text-lg font-bold text-white">
                       Total
                     </span>
                     <span className="text-2xl font-bold text-secondary">
@@ -205,7 +205,7 @@ export default function PanierPage() {
 
                 <button
                   onClick={handleOrder}
-                  className="w-full bg-nexora-blue hover:bg-nexora-blue-dark text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors mb-3"
+                  className="w-full bg-abdelstore-blue hover:bg-abdelstore-blue-dark text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors mb-3"
                 >
                   <MessageCircle size={18} />
                   Commander via WhatsApp

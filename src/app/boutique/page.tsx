@@ -27,20 +27,20 @@ export default function BoutiquePage() {
   return (
     <>
       {/* Banner */}
-      <section className="bg-gradient-to-r from-nexora-black to-nexora-blue text-white py-16 md:py-20">
+      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-16 md:py-20">
         <div className="container-custom px-4 md:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Notre Boutique
           </h1>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+          <p className="text-abdel-gold/80 text-lg max-w-2xl mx-auto">
             Montres connectées, Oraimo et power banks — disponibles à Dakar,
             livraison au Sénégal. Catalogue en cours d&apos;enrichissement.
           </p>
         </div>
       </section>
 
-      <section className="bg-cream py-8 border-b border-sand">
-        <div className="container-custom px-4 md:px-8 max-w-3xl mx-auto text-center text-sm text-gray-600 leading-relaxed">
+      <section className="bg-abdel-soft py-8 border-b border-abdel-gold/20">
+        <div className="container-custom px-4 md:px-8 max-w-3xl mx-auto text-center text-sm text-white/70 leading-relaxed">
           <p>
             <strong>Boutique tech à Dakar :</strong> achetez une montre
             connectée, des écouteurs Oraimo ou un chargeur / power bank.
@@ -51,7 +51,7 @@ export default function BoutiquePage() {
       </section>
 
       {/* Filters */}
-      <section className="bg-white sticky top-16 z-30 border-b shadow-sm">
+      <section className="bg-abdel-card sticky top-16 z-30 border-b shadow-black/40">
         <div className="container-custom px-4 md:px-8 py-4">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             {/* Search */}
@@ -65,7 +65,7 @@ export default function BoutiquePage() {
                 placeholder="Rechercher un produit..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                className="w-full pl-10 pr-4 py-2.5 border border-abdel-gold/20 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
               />
             </div>
 
@@ -79,7 +79,7 @@ export default function BoutiquePage() {
                   className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                     category === cat
                       ? "bg-primary text-white"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      : "bg-gray-100 text-white/70 hover:bg-gray-200"
                   }`}
                 >
                   {cat}
@@ -91,17 +91,17 @@ export default function BoutiquePage() {
       </section>
 
       {/* Products Grid */}
-      <section className="bg-beige section-padding">
+      <section className="bg-abdel-soft section-padding">
         <div className="container-custom">
           {filtered.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">
+              <p className="text-white/55 text-lg">
                 Aucun produit trouvé pour votre recherche.
               </p>
             </div>
           ) : (
             <>
-              <p className="text-sm text-gray-500 mb-6">
+              <p className="text-sm text-white/55 mb-6">
                 {filtered.length} produit{filtered.length > 1 ? "s" : ""}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

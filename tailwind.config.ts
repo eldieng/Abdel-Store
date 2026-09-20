@@ -9,41 +9,48 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Charte Nexora : noir + bleu sac (#444D9C)
+        // Charte Abdel Store : noir + or (#DAA43E)
         primary: {
-          DEFAULT: "#444D9C",
-          light: "#5B67B8",
-          dark: "#333A7A",
-          50: "#EEF0F8",
+          DEFAULT: "#DAA43E",
+          light: "#F1BA46",
+          dark: "#B8862D",
+          50: "#2A2418",
         },
         secondary: {
-          DEFAULT: "#1A1C24",
-          light: "#2A2D38",
-          dark: "#0F1117",
+          DEFAULT: "#F5F5F5",
+          light: "#FFFFFF",
+          dark: "#D4D4D4",
         },
         accent: {
-          DEFAULT: "#5B67C7",
-          light: "#7B85D6",
-          dark: "#444D9C",
+          DEFAULT: "#F1BA46",
+          light: "#FCD76F",
+          dark: "#DAA43E",
         },
-        // Alias historiques (ex-olive Fabiram) → bleu Nexora
         olive: {
-          DEFAULT: "#444D9C",
-          light: "#5B67B8",
-          dark: "#2E3470",
+          DEFAULT: "#DAA43E",
+          light: "#F1BA46",
+          dark: "#9A7024",
         },
         cream: {
-          DEFAULT: "#F5F6FB",
-          dark: "#EBEDF5",
+          DEFAULT: "#141414",
+          dark: "#0A0A0A",
         },
-        beige: "#F5F6FB",
-        sand: "#E4E7F2",
-        bark: "#0F1117",
-        leaf: "#5B67C7",
-        nexora: {
-          blue: "#444D9C",
-          black: "#0F1117",
-          soft: "#F5F6FB",
+        beige: "#141414",
+        sand: "#2A2A2A",
+        bark: "#F5F5F5",
+        leaf: "#F1BA46",
+        abdelstore: {
+          blue: "#DAA43E",
+          black: "#000000",
+          soft: "#141414",
+        },
+        abdel: {
+          gold: "#DAA43E",
+          goldLight: "#F1BA46",
+          goldDark: "#B8862D",
+          black: "#000000",
+          soft: "#141414",
+          card: "#1A1A1A",
         },
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -51,9 +58,6 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-geist-sans)", "Arial", "sans-serif"],
         body: ["var(--font-geist-sans)", "Arial", "sans-serif"],
-      },
-      borderRadius: {
-        organic: "16px",
       },
     },
   },

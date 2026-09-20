@@ -27,7 +27,7 @@ import {
 import { formatPrice } from "@/lib/cart";
 import Link from "next/link";
 
-const ADMIN_PASSWORD = "Nexora Shopbyamsa";
+const ADMIN_PASSWORD = "Abdel Storebyamsa";
 
 export default function AdminPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -46,7 +46,7 @@ export default function AdminPage() {
   };
 
   useEffect(() => {
-    const session = sessionStorage.getItem("nexora_admin");
+    const session = sessionStorage.getItem("abdelstore_admin");
     if (session === "true") {
       setIsLoggedIn(true);
       loadProducts();
@@ -57,7 +57,7 @@ export default function AdminPage() {
     e.preventDefault();
     if (password === ADMIN_PASSWORD) {
       setIsLoggedIn(true);
-      sessionStorage.setItem("nexora_admin", "true");
+      sessionStorage.setItem("abdelstore_admin", "true");
       loadProducts();
       setError("");
     } else {
@@ -67,7 +67,7 @@ export default function AdminPage() {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    sessionStorage.removeItem("nexora_admin");
+    sessionStorage.removeItem("abdelstore_admin");
   };
 
   const handleSaveProduct = async (product: Product) => {
@@ -105,7 +105,7 @@ export default function AdminPage() {
       usage: "",
       price: 0,
       weight: "",
-      image: "/images/Logo_Nexora Shop.png",
+      image: "/images/Logo_Abdel Store.png",
       category: "",
       badge: "Produit Naturel",
       inStock: true,
@@ -131,16 +131,16 @@ export default function AdminPage() {
   // Login Screen
   if (!isLoggedIn) {
     return (
-      <section className="min-h-[80vh] flex items-center justify-center bg-cream">
-        <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full mx-4">
+      <section className="min-h-[80vh] flex items-center justify-center bg-abdel-soft">
+        <div className="bg-abdel-card p-8 rounded-2xl shadow-lg max-w-md w-full mx-4">
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Lock size={28} className="text-olive" />
+            <div className="w-16 h-16 bg-abdel-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Lock size={28} className="text-abdel-gold" />
             </div>
-            <h1 className="text-2xl font-heading font-bold text-bark">
+            <h1 className="text-2xl font-heading font-bold text-white">
               Administration
             </h1>
-            <p className="text-gray-500 text-sm mt-1">
+            <p className="text-white/55 text-sm mt-1">
               Connectez-vous pour gérer vos produits
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function AdminPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive"
+                className="w-full px-4 py-3 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold"
                 placeholder="Entrez le mot de passe"
                 required
               />
@@ -178,10 +178,10 @@ export default function AdminPage() {
   // Product Edit Form
   if (editingProduct) {
     return (
-      <section className="bg-cream min-h-screen">
-        <div className="bg-white border-b sticky top-0 z-30">
+      <section className="bg-abdel-soft min-h-screen">
+        <div className="bg-abdel-card border-b sticky top-0 z-30">
           <div className="container-custom px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
-            <h1 className="text-sm md:text-xl font-bold text-bark truncate pr-2">
+            <h1 className="text-sm md:text-xl font-bold text-white truncate pr-2">
               {isCreating ? "Nouveau produit" : `Modifier : ${editingProduct.name}`}
             </h1>
             <button
@@ -189,7 +189,7 @@ export default function AdminPage() {
                 setEditingProduct(null);
                 setIsCreating(false);
               }}
-              className="text-gray-500 hover:text-gray-700 p-2 shrink-0"
+              className="text-white/55 hover:text-gray-700 p-2 shrink-0"
             >
               <X size={20} />
             </button>
@@ -197,7 +197,7 @@ export default function AdminPage() {
         </div>
 
         <div className="container-custom px-4 md:px-8 py-4 md:py-8">
-          <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm max-w-3xl mx-auto">
+          <div className="bg-abdel-card rounded-xl md:rounded-2xl p-4 md:p-8 shadow-black/40 max-w-3xl mx-auto">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -239,17 +239,17 @@ export default function AdminPage() {
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
                       disabled={uploading}
-                      className="w-full border-2 border-dashed border-olive/30 rounded-xl p-6 text-center hover:border-olive hover:bg-olive/5 transition-colors cursor-pointer disabled:opacity-50"
+                      className="w-full border-2 border-dashed border-abdel-gold/30 rounded-xl p-6 text-center hover:border-abdel-gold hover:bg-abdel-gold/5 transition-colors cursor-pointer disabled:opacity-50"
                     >
                       {uploading ? (
                         <div className="flex flex-col items-center gap-2">
-                          <Loader2 size={24} className="text-olive animate-spin" />
-                          <span className="text-sm text-gray-500">Envoi en cours...</span>
+                          <Loader2 size={24} className="text-abdel-gold animate-spin" />
+                          <span className="text-sm text-white/55">Envoi en cours...</span>
                         </div>
                       ) : (
                         <div className="flex flex-col items-center gap-2">
-                          <Upload size={24} className="text-olive" />
-                          <span className="text-sm font-medium text-bark">
+                          <Upload size={24} className="text-abdel-gold" />
+                          <span className="text-sm font-medium text-white">
                             Cliquez pour choisir une photo
                           </span>
                           <span className="text-xs text-gray-400">
@@ -274,7 +274,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, name: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                     placeholder="ex: Oraimo SpaceBud"
                   />
                 </div>
@@ -288,7 +288,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, subtitle: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                     placeholder="ex: Écouteurs sans fil ANC"
                   />
                 </div>
@@ -309,7 +309,7 @@ export default function AdminPage() {
                         price: parseInt(e.target.value) || 0,
                       })
                     }
-                    className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                     placeholder="ex: 2000"
                   />
                 </div>
@@ -324,7 +324,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, weight: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                     placeholder="ex: 200g"
                   />
                 </div>
@@ -338,7 +338,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setEditingProduct({ ...editingProduct, category: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                    className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                     placeholder="ex: Audio"
                   />
                 </div>
@@ -354,7 +354,7 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, description: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm resize-none"
+                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
                   placeholder="Courte description pour la carte produit"
                 />
               </div>
@@ -372,7 +372,7 @@ export default function AdminPage() {
                       longDescription: e.target.value,
                     })
                   }
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm resize-none"
+                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
                   placeholder="Description détaillée pour la page produit"
                 />
               </div>
@@ -387,7 +387,7 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, usage: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm resize-none"
+                  className="w-full px-4 py-2.5 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm resize-none"
                   placeholder="Comment utiliser ce produit"
                 />
               </div>
@@ -406,7 +406,7 @@ export default function AdminPage() {
                         newBenefits[i] = e.target.value;
                         setEditingProduct({ ...editingProduct, benefits: newBenefits });
                       }}
-                      className="flex-1 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                       placeholder="Un bienfait du produit..."
                     />
                     <button
@@ -431,7 +431,7 @@ export default function AdminPage() {
                       benefits: [...editingProduct.benefits, ""],
                     })
                   }
-                  className="text-olive text-sm font-medium flex items-center gap-1 mt-1"
+                  className="text-abdel-gold text-sm font-medium flex items-center gap-1 mt-1"
                 >
                   <Plus size={14} />
                   Ajouter un bienfait
@@ -453,7 +453,7 @@ export default function AdminPage() {
                         newVariants[i] = { ...newVariants[i], weight: e.target.value };
                         setEditingProduct({ ...editingProduct, variants: newVariants });
                       }}
-                      className="flex-1 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                       placeholder="ex: 200g"
                     />
                     <input
@@ -464,7 +464,7 @@ export default function AdminPage() {
                         newVariants[i] = { ...newVariants[i], price: parseInt(e.target.value) || 0 };
                         setEditingProduct({ ...editingProduct, variants: newVariants });
                       }}
-                      className="flex-1 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-olive/30 focus:border-olive text-sm"
+                      className="flex-1 px-4 py-2 border border-abdel-gold/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-abdel-gold/30 focus:border-abdel-gold text-sm"
                       placeholder="Prix en FCFA"
                     />
                     <button
@@ -487,7 +487,7 @@ export default function AdminPage() {
                       variants: [...(editingProduct.variants || []), { weight: "", price: 0 }],
                     })
                   }
-                  className="text-olive text-sm font-medium flex items-center gap-1 mt-1"
+                  className="text-abdel-gold text-sm font-medium flex items-center gap-1 mt-1"
                 >
                   <Plus size={14} />
                   Ajouter une variante
@@ -502,7 +502,7 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditingProduct({ ...editingProduct, inStock: e.target.checked })
                   }
-                  className="w-4 h-4 text-olive rounded"
+                  className="w-4 h-4 text-abdel-gold rounded"
                 />
                 <label htmlFor="inStock" className="text-sm text-gray-700">
                   En stock
@@ -542,20 +542,20 @@ export default function AdminPage() {
 
   // Dashboard
   return (
-    <section className="bg-cream min-h-screen">
+    <section className="bg-abdel-soft min-h-screen">
       {/* Admin Header */}
-      <div className="bg-white border-b sticky top-0 z-30">
+      <div className="bg-abdel-card border-b sticky top-0 z-30">
         <div className="container-custom px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 md:gap-3">
-            <Package size={20} className="text-olive" />
-            <h1 className="text-base md:text-xl font-bold text-bark">
-              Admin Nexora Shop
+            <Package size={20} className="text-abdel-gold" />
+            <h1 className="text-base md:text-xl font-bold text-white">
+              Admin Abdel Store
             </h1>
           </div>
           <div className="flex items-center gap-2 md:gap-3">
             <Link
               href="/"
-              className="text-xs md:text-sm text-gray-500 hover:text-olive flex items-center gap-1 p-2 md:p-0"
+              className="text-xs md:text-sm text-white/55 hover:text-abdel-gold flex items-center gap-1 p-2 md:p-0"
             >
               <Eye size={16} />
               <span className="hidden sm:inline">Voir le site</span>
@@ -574,24 +574,24 @@ export default function AdminPage() {
       <div className="container-custom px-4 md:px-8 py-6 md:py-8">
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
-          <div className="bg-white p-4 md:p-5 rounded-xl md:rounded-2xl shadow-sm border border-sand">
-            <p className="text-xs md:text-sm text-gray-500">Produits</p>
-            <p className="text-xl md:text-2xl font-bold text-bark">{products.length}</p>
+          <div className="bg-abdel-card p-4 md:p-5 rounded-xl md:rounded-2xl shadow-black/40 border border-abdel-gold/20">
+            <p className="text-xs md:text-sm text-white/55">Produits</p>
+            <p className="text-xl md:text-2xl font-bold text-white">{products.length}</p>
           </div>
-          <div className="bg-white p-4 md:p-5 rounded-xl md:rounded-2xl shadow-sm border border-sand">
-            <p className="text-xs md:text-sm text-gray-500">En stock</p>
-            <p className="text-xl md:text-2xl font-bold text-olive">
+          <div className="bg-abdel-card p-4 md:p-5 rounded-xl md:rounded-2xl shadow-black/40 border border-abdel-gold/20">
+            <p className="text-xs md:text-sm text-white/55">En stock</p>
+            <p className="text-xl md:text-2xl font-bold text-abdel-gold">
               {products.filter((p) => p.inStock).length}
             </p>
           </div>
-          <div className="bg-white p-4 md:p-5 rounded-xl md:rounded-2xl shadow-sm border border-sand">
-            <p className="text-xs md:text-sm text-gray-500">Catégories</p>
-            <p className="text-xl md:text-2xl font-bold text-bark">
+          <div className="bg-abdel-card p-4 md:p-5 rounded-xl md:rounded-2xl shadow-black/40 border border-abdel-gold/20">
+            <p className="text-xs md:text-sm text-white/55">Catégories</p>
+            <p className="text-xl md:text-2xl font-bold text-white">
               {new Set(products.map((p) => p.category)).size}
             </p>
           </div>
-          <div className="bg-white p-4 md:p-5 rounded-xl md:rounded-2xl shadow-sm border border-sand">
-            <p className="text-xs md:text-sm text-gray-500">Prix moyen</p>
+          <div className="bg-abdel-card p-4 md:p-5 rounded-xl md:rounded-2xl shadow-black/40 border border-abdel-gold/20">
+            <p className="text-xs md:text-sm text-white/55">Prix moyen</p>
             <p className="text-xl md:text-2xl font-bold text-secondary">
               {products.length > 0
                 ? formatPrice(
@@ -615,9 +615,9 @@ export default function AdminPage() {
         {/* Mobile: Product Cards */}
         <div className="md:hidden space-y-3">
           {products.map((product) => (
-            <div key={product.id} className="bg-white rounded-xl shadow-sm border border-sand p-4">
+            <div key={product.id} className="bg-abdel-card rounded-xl shadow-black/40 border border-abdel-gold/20 p-4">
               <div className="flex items-start gap-3">
-                <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-sand">
+                <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-abdel-gold/20">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -628,13 +628,13 @@ export default function AdminPage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <p className="font-semibold text-bark text-sm truncate">{product.name}</p>
-                      <p className="text-xs text-gray-500 truncate">{product.subtitle}</p>
+                      <p className="font-semibold text-white text-sm truncate">{product.name}</p>
+                      <p className="text-xs text-white/55 truncate">{product.subtitle}</p>
                     </div>
                     <span
                       className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${
                         product.inStock
-                          ? "bg-primary-50 text-nexora-blue"
+                          ? "bg-abdel-gold/10 text-abdelstore-blue"
                           : "bg-red-100 text-red-700"
                       }`}
                     >
@@ -646,16 +646,16 @@ export default function AdminPage() {
                       {formatPrice(product.price)}
                     </span>
                     <span className="text-xs text-gray-400">{product.weight}</span>
-                    <span className="text-xs text-olive bg-olive/10 px-2 py-0.5 rounded-full">
+                    <span className="text-xs text-abdel-gold bg-abdel-gold/10 px-2 py-0.5 rounded-full">
                       {product.category}
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 mt-3 pt-3 border-t border-sand">
+              <div className="flex items-center gap-2 mt-3 pt-3 border-t border-abdel-gold/20">
                 <button
                   onClick={() => setEditingProduct({ ...product })}
-                  className="flex-1 text-olive bg-olive/10 hover:bg-olive/20 py-2 rounded-lg transition-colors text-sm font-medium flex items-center justify-center gap-1.5"
+                  className="flex-1 text-abdel-gold bg-abdel-gold/10 hover:bg-abdel-gold/20 py-2 rounded-lg transition-colors text-sm font-medium flex items-center justify-center gap-1.5"
                 >
                   <Pencil size={14} />
                   Modifier
@@ -673,37 +673,37 @@ export default function AdminPage() {
         </div>
 
         {/* Desktop: Products Table */}
-        <div className="hidden md:block bg-white rounded-2xl shadow-sm overflow-hidden border border-sand">
+        <div className="hidden md:block bg-abdel-card rounded-2xl shadow-black/40 overflow-hidden border border-abdel-gold/20">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-sand/50 border-b border-sand">
+              <thead className="bg-sand/50 border-b border-abdel-gold/20">
                 <tr>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Produit
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Catégorie
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Prix
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Poids
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-left px-6 py-4 text-sm font-semibold text-white">
                     Stock
                   </th>
-                  <th className="text-right px-6 py-4 text-sm font-semibold text-bark">
+                  <th className="text-right px-6 py-4 text-sm font-semibold text-white">
                     Actions
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-sand">
                 {products.map((product) => (
-                  <tr key={product.id} className="hover:bg-cream/50">
+                  <tr key={product.id} className="hover:bg-abdel-soft/50">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-sand">
+                        <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-abdel-gold/20">
                           <Image
                             src={product.image}
                             alt={product.name}
@@ -712,17 +712,17 @@ export default function AdminPage() {
                           />
                         </div>
                         <div>
-                          <p className="font-semibold text-bark text-sm">
+                          <p className="font-semibold text-white text-sm">
                             {product.name}
                           </p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-xs text-white/55">
                             {product.subtitle}
                           </p>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4">
-                      <span className="text-sm text-olive bg-olive/10 px-2.5 py-1 rounded-full font-medium">
+                      <span className="text-sm text-abdel-gold bg-abdel-gold/10 px-2.5 py-1 rounded-full font-medium">
                         {product.category}
                       </span>
                     </td>
@@ -731,14 +731,14 @@ export default function AdminPage() {
                         {formatPrice(product.price)}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
+                    <td className="px-6 py-4 text-sm text-white/70">
                       {product.weight}
                     </td>
                     <td className="px-6 py-4">
                       <span
                         className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                           product.inStock
-                            ? "bg-primary-50 text-nexora-blue"
+                            ? "bg-abdel-gold/10 text-abdelstore-blue"
                             : "bg-red-100 text-red-700"
                         }`}
                       >
@@ -749,7 +749,7 @@ export default function AdminPage() {
                       <div className="flex items-center justify-end gap-1">
                         <button
                           onClick={() => setEditingProduct({ ...product })}
-                          className="text-olive hover:text-olive-dark p-2 hover:bg-olive/10 rounded-lg transition-colors"
+                          className="text-abdel-gold hover:text-abdel-gold-dark p-2 hover:bg-abdel-gold/10 rounded-lg transition-colors"
                           title="Modifier"
                         >
                           <Pencil size={16} />

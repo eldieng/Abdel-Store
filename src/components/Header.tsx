@@ -19,10 +19,8 @@ export default function Header() {
     updateCart();
     window.addEventListener("cart-updated", updateCart);
     window.addEventListener("storage", updateCart);
-
     const handleScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("cart-updated", updateCart);
       window.removeEventListener("storage", updateCart);
@@ -39,22 +37,22 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-nexora-black text-white text-xs py-2 hidden md:block">
+      <div className="bg-black text-abdel-gold text-xs py-2 hidden md:block border-b border-abdel-gold/20">
         <div className="container-custom px-4 md:px-8 flex items-center justify-between">
-          <span className="text-white/80">
-            Nexora Shop · Dakar — Montres, Oraimo &amp; accessoires tech
+          <span className="text-abdel-gold/90 font-medium tracking-wide">
+            ABDEL STORE · Dakar — Montres, Oraimo &amp; accessoires premium
           </span>
           <div className="flex items-center gap-4">
             <a
               href="tel:+221772958443"
-              className="flex items-center gap-1 text-white/80 hover:text-white transition-colors"
+              className="flex items-center gap-1 text-abdel-gold/80 hover:text-abdel-goldLight transition-colors"
             >
               <Phone size={12} />
               +221 77 295 84 43
             </a>
             <Link
               href="/admin"
-              className="hover:text-white text-white/80 flex items-center gap-1"
+              className="text-abdel-gold/80 hover:text-abdel-goldLight flex items-center gap-1"
             >
               <User size={12} />
               Admin
@@ -66,18 +64,18 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 border-b ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-sand py-2"
-            : "bg-white border-transparent py-3"
+            ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/40 border-abdel-gold/20 py-2"
+            : "bg-black border-abdel-gold/10 py-3"
         }`}
       >
         <div className="container-custom flex items-center justify-between px-4 md:px-8">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-nexora.png"
-              alt="Nexora Shop"
-              width={180}
-              height={70}
-              className="h-11 md:h-14 w-auto object-contain"
+              src="/images/logo-abdel-store.png"
+              alt="Abdel Store"
+              width={72}
+              height={72}
+              className="h-12 md:h-14 w-auto object-contain"
               priority
             />
           </Link>
@@ -87,28 +85,28 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-bark/80 hover:text-nexora-blue font-medium transition-colors relative group text-sm"
+                className="text-white/80 hover:text-abdel-gold font-medium transition-colors relative group text-sm tracking-wide"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-nexora-blue group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-abdel-gold group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-3">
             <Link href="/panier" className="relative group">
-              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center group-hover:bg-nexora-blue/15 transition-colors">
-                <ShoppingCart size={20} className="text-nexora-blue" />
+              <div className="w-10 h-10 rounded-xl bg-abdel-gold/10 border border-abdel-gold/30 flex items-center justify-center group-hover:bg-abdel-gold/20 transition-colors">
+                <ShoppingCart size={20} className="text-abdel-gold" />
               </div>
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-nexora-blue text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-1 -right-1 bg-abdel-gold text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                   {cartCount}
                 </span>
               )}
             </Link>
 
             <button
-              className="md:hidden text-bark w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center"
+              className="md:hidden text-abdel-gold w-10 h-10 rounded-xl bg-abdel-gold/10 border border-abdel-gold/30 flex items-center justify-center"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
@@ -118,13 +116,13 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-sand shadow-lg">
+          <div className="md:hidden bg-abdel-card border-t border-abdel-gold/20">
             <nav className="flex flex-col py-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-6 py-3.5 text-bark hover:bg-primary-50 hover:text-nexora-blue transition-colors border-b border-gray-50"
+                  className="px-6 py-3.5 text-white/80 hover:bg-abdel-gold/10 hover:text-abdel-gold transition-colors border-b border-white/5"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -132,7 +130,7 @@ export default function Header() {
               ))}
               <Link
                 href="/admin"
-                className="px-6 py-3.5 text-bark hover:bg-primary-50 hover:text-nexora-blue transition-colors flex items-center gap-2"
+                className="px-6 py-3.5 text-white/80 hover:bg-abdel-gold/10 hover:text-abdel-gold transition-colors flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <User size={16} />

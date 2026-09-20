@@ -9,7 +9,7 @@ export interface CartItem {
 
 export function getCart(): CartItem[] {
   if (typeof window === "undefined") return [];
-  const stored = localStorage.getItem("nexora_cart");
+  const stored = localStorage.getItem("abdelstore_cart");
   if (stored) {
     try {
       return JSON.parse(stored);
@@ -21,7 +21,7 @@ export function getCart(): CartItem[] {
 }
 
 export function saveCart(cart: CartItem[]) {
-  localStorage.setItem("nexora_cart", JSON.stringify(cart));
+  localStorage.setItem("abdelstore_cart", JSON.stringify(cart));
   window.dispatchEvent(new Event("cart-updated"));
 }
 

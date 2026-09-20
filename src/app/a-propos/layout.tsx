@@ -4,15 +4,15 @@ import { SITE_URL } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "À propos — Boutique Tech à Dakar",
   description:
-    "Nexora Shop est une boutique d'accessoires high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks pour le Sénégal.",
+    "Abdel Store est une boutique d'accessoires high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks pour le Sénégal.",
   keywords: [
-    "nexora shop dakar",
+    "abdel store dakar",
     "boutique tech sicap mbao",
     "accessoires high-tech sénégal",
-    "histoire nexora shop",
+    "histoire abdel store",
   ],
   openGraph: {
-    title: "À propos de Nexora Shop — Dakar",
+    title: "À propos de Abdel Store — Dakar",
     description:
       "Boutique sénégalaise d'accessoires high-tech à Dakar. Montres, Oraimo, charge et power banks.",
   },

@@ -25,25 +25,25 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-nexora-soft via-white to-primary-50 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-abdelstore-soft via-white to-primary-50 overflow-hidden">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
-          <div className="absolute top-10 right-0 w-80 h-80 bg-nexora-blue/20 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-0 w-80 h-80 bg-abdelstore-blue/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl" />
         </div>
 
         <div className="container-custom px-4 md:px-8 py-20 md:py-28 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-nexora-blue/10 text-nexora-blue px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="inline-flex items-center gap-2 bg-abdelstore-blue/10 text-abdelstore-blue px-4 py-2 rounded-full text-sm font-semibold">
                 <Zap size={16} />
                 High-tech · Livraison à Dakar
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bark leading-tight tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
                 Votre boutique{" "}
-                <span className="text-nexora-blue">tech</span> pour le{" "}
-                <span className="text-bark">quotidien</span>
+                <span className="text-abdelstore-blue">tech</span> pour le{" "}
+                <span className="text-white">quotidien</span>
               </h1>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+              <p className="text-lg text-white/70 leading-relaxed max-w-lg">
                 Montres connectées, écouteurs Oraimo, chargeurs et power banks.
                 Des accessoires sélectionnés, prêts à commander depuis Dakar.
               </p>
@@ -60,10 +60,10 @@ export default function Home() {
 
             <div className="relative">
               <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-4 bg-nexora-blue/10 rounded-2xl" />
+                <div className="absolute inset-4 bg-abdelstore-blue/10 rounded-2xl" />
                 <Image
                   src="/images/montre-noire-milanais.jpeg"
-                  alt="Produits Nexora Shop - Montres et accessoires"
+                  alt="Produits Abdel Store - Montres et accessoires"
                   fill
                   className="object-cover rounded-3xl shadow-2xl"
                   priority
@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* AVANTAGES */}
-      <section className="bg-white section-padding border-y border-sand">
+      <section className="bg-abdel-card section-padding border-y border-abdel-gold/20">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
@@ -102,13 +102,13 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="text-center p-6 rounded-2xl hover:bg-cream transition-colors duration-300 group"
+                className="text-center p-6 rounded-2xl hover:bg-abdel-soft transition-colors duration-300 group"
               >
-                <div className="w-14 h-14 bg-nexora-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-nexora-blue/20 transition-colors">
-                  <item.icon size={24} className="text-nexora-blue" />
+                <div className="w-14 h-14 bg-abdelstore-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-abdelstore-blue/20 transition-colors">
+                  <item.icon size={24} className="text-abdelstore-blue" />
                 </div>
-                <h3 className="font-bold text-bark mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.desc}</p>
+                <h3 className="font-bold text-white mb-1">{item.title}</h3>
+                <p className="text-sm text-white/55">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -116,16 +116,16 @@ export default function Home() {
       </section>
 
       {/* PRODUITS VEDETTES */}
-      <section className="bg-cream section-padding">
+      <section className="bg-abdel-soft section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-nexora-blue font-semibold text-sm uppercase tracking-wider">
+            <span className="text-abdelstore-blue font-semibold text-sm uppercase tracking-wider">
               Notre sélection
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
               Nos Produits Phares
             </h2>
-            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+            <p className="text-white/70 mt-3 max-w-2xl mx-auto">
               Des produits tech africains soigneusement sélectionnés pour votre
               santé et votre plaisir
             </p>
@@ -147,21 +147,21 @@ export default function Home() {
       </section>
 
       {/* À PROPOS SECTION */}
-      <section className="bg-white section-padding">
+      <section className="bg-abdel-card section-padding">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <Image
                   src="/images/oraimo-openbuds-noir.jpeg"
-                  alt="Écouteurs Oraimo Nexora Shop"
+                  alt="Écouteurs Oraimo Abdel Store"
                   width={300}
                   height={400}
                   className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
                 />
                 <Image
                   src="/images/oraimo-powercube-201.jpeg"
-                  alt="Chargeur Oraimo Nexora Shop"
+                  alt="Chargeur Oraimo Abdel Store"
                   width={300}
                   height={400}
                   className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] mt-8"
@@ -169,18 +169,18 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-6">
-              <span className="text-nexora-blue font-semibold text-sm uppercase tracking-wider">
+              <span className="text-abdelstore-blue font-semibold text-sm uppercase tracking-wider">
                 Notre histoire
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Nexora Shop, la tech au service de votre quotidien
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Abdel Store, la tech au service de votre quotidien
               </h2>
-              <p className="text-gray-600 leading-relaxed">
-                Née à Dakar, Nexora Shop est une boutique sénégalaise dédiée aux
+              <p className="text-white/70 leading-relaxed">
+                Née à Dakar, Abdel Store est une boutique sénégalaise dédiée aux
                 accessoires high-tech. Nous sélectionnons montres connectées,
                 audio Oraimo, chargeurs et power banks pour un usage fiable au quotidien.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Notre objectif : rendre la tech accessible, avec un service local
                 et des produits choisis pour leur qualité et leur rapport prix.
               </p>
@@ -194,13 +194,13 @@ export default function Home() {
       </section>
 
       {/* TÉMOIGNAGES */}
-      <section className="bg-cream section-padding">
+      <section className="bg-abdel-soft section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-nexora-blue font-semibold text-sm uppercase tracking-wider">
+            <span className="text-abdelstore-blue font-semibold text-sm uppercase tracking-wider">
               Témoignages
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
               Ce que disent nos clients
             </h2>
           </div>
@@ -209,34 +209,34 @@ export default function Home() {
             {[
               {
                 name: "Aminata D.",
-                text: "Ma montre connectée Nexora Shop est top. Autonomie correcte et le bracelet cadeau est un vrai plus.",
+                text: "Ma montre connectée Abdel Store est top. Autonomie correcte et le bracelet cadeau est un vrai plus.",
                 rating: 5,
               },
               {
                 name: "Fatou S.",
-                text: "Les Oraimo SpaceBud sont confortables et le son est clair. Commande simple, merci Nexora Shop.",
+                text: "Les Oraimo SpaceBud sont confortables et le son est clair. Commande simple, merci Abdel Store.",
                 rating: 5,
               },
               {
                 name: "Ousmane N.",
-                text: "Le power bank MagSafe m'a sauvé en déplacement à Dakar. Je recommande Nexora Shop.",
+                text: "Le power bank MagSafe m'a sauvé en déplacement à Dakar. Je recommande Abdel Store.",
                 rating: 5,
               },
             ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm">
+              <div key={i} className="bg-abdel-card p-8 rounded-2xl border border-abdel-gold/20 shadow-black/40">
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, j) => (
                     <Star
                       key={j}
                       size={16}
-                      className="fill-accent text-accent"
+                      className="fill-abdel-gold text-abdel-gold"
                     />
                   ))}
                 </div>
-                <p className="text-gray-600 italic mb-4 leading-relaxed">
+                <p className="text-white/70 italic mb-4 leading-relaxed">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <p className="font-bold text-gray-800">{testimonial.name}</p>
+                <p className="font-bold text-white">{testimonial.name}</p>
               </div>
             ))}
           </div>
@@ -245,14 +245,14 @@ export default function Home() {
 
 
       {/* SEO LOCAL DAKAR */}
-      <section className="bg-white section-padding border-t border-sand">
+      <section className="bg-abdel-card section-padding border-t border-abdel-gold/20">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-bark mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
             Accessoires tech à Dakar, Sénégal
           </h2>
-          <div className="prose prose-gray mx-auto text-gray-600 leading-relaxed space-y-4 text-center md:text-left">
+          <div className="prose prose-gray mx-auto text-white/70 leading-relaxed space-y-4 text-center md:text-left">
             <p>
-              <strong>Nexora Shop</strong> est votre boutique d&apos;accessoires
+              <strong>Abdel Store</strong> est votre boutique d&apos;accessoires
               high-tech à <strong>Dakar</strong> (Sicap Mbao). Nous proposons des{" "}
               <strong>montres connectées</strong>, des{" "}
               <strong>écouteurs Oraimo</strong> (OpenBuds, SpaceBud), des{" "}
@@ -272,12 +272,12 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER / CTA */}
-      <section className="bg-nexora-blue section-padding">
+      <section className="bg-abdelstore-blue section-padding">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Restez connecté avec Nexora Shop
+            Restez connecté avec Abdel Store
           </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-abdel-gold/80 mb-8 max-w-xl mx-auto">
             Inscrivez-vous pour recevoir nos offres exclusives et découvrir nos
             nouveaux produits en avant-première.
           </p>
@@ -291,12 +291,12 @@ export default function Home() {
             <input
               type="email"
               placeholder="Votre adresse email"
-              className="flex-1 px-5 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
+              className="flex-1 px-5 py-3 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-abdel-gold"
               required
             />
             <button
               type="submit"
-              className="bg-nexora-blue hover:bg-olive-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+              className="bg-abdelstore-blue hover:bg-abdel-gold-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors"
             >
               S&apos;inscrire
             </button>

@@ -50,7 +50,7 @@ export default function ProductPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-500 text-lg mb-4">Produit non trouvé</p>
+          <p className="text-white/55 text-lg mb-4">Produit non trouvé</p>
           <Link href="/boutique" className="btn-primary">
             Retour à la boutique
           </Link>
@@ -76,15 +76,15 @@ export default function ProductPage() {
 
   const brandName = product.name.toLowerCase().includes("oraimo")
     ? "Oraimo"
-    : "Nexora Shop";
+    : "Abdel Store";
 
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.longDescription,
-    image: `https://nexora.sn${product.image}`,
-    url: `https://nexora.sn/produit/${product.id}`,
+    image: `https://abdelstore.sn${product.image}`,
+    url: `https://abdelstore.sn/produit/${product.id}`,
     sku: product.id,
     brand: {
       "@type": "Brand",
@@ -99,8 +99,8 @@ export default function ProductPage() {
           availability: product.inStock
             ? "https://schema.org/InStock"
             : "https://schema.org/OutOfStock",
-          url: `https://nexora.sn/produit/${product.id}`,
-          seller: { "@type": "Organization", name: "Nexora Shop" },
+          url: `https://abdelstore.sn/produit/${product.id}`,
+          seller: { "@type": "Organization", name: "Abdel Store" },
           areaServed: ["Dakar", "Sénégal"],
           description: `${product.name} - ${v.weight}`,
         }))
@@ -111,8 +111,8 @@ export default function ProductPage() {
           availability: product.inStock
             ? "https://schema.org/InStock"
             : "https://schema.org/OutOfStock",
-          url: `https://nexora.sn/produit/${product.id}`,
-          seller: { "@type": "Organization", name: "Nexora Shop" },
+          url: `https://abdelstore.sn/produit/${product.id}`,
+          seller: { "@type": "Organization", name: "Abdel Store" },
           areaServed: ["Dakar", "Sénégal"],
         },
   };
@@ -121,9 +121,9 @@ export default function ProductPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://nexora.sn" },
-      { "@type": "ListItem", position: 2, name: "Boutique", item: "https://nexora.sn/boutique" },
-      { "@type": "ListItem", position: 3, name: product.name, item: `https://nexora.sn/produit/${product.id}` },
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://abdelstore.sn" },
+      { "@type": "ListItem", position: 2, name: "Boutique", item: "https://abdelstore.sn/boutique" },
+      { "@type": "ListItem", position: 3, name: product.name, item: `https://abdelstore.sn/produit/${product.id}` },
     ],
   };
 
@@ -139,9 +139,9 @@ export default function ProductPage() {
       />
 
       {/* Breadcrumb */}
-      <div className="bg-cream py-3">
+      <div className="bg-abdel-soft py-3">
         <div className="container-custom px-4 md:px-8">
-          <div className="flex items-center gap-2 text-sm text-gray-500">
+          <div className="flex items-center gap-2 text-sm text-white/55">
             <Link href="/" className="hover:text-primary">
               Accueil
             </Link>
@@ -150,17 +150,17 @@ export default function ProductPage() {
               Boutique
             </Link>
             <ChevronRight size={14} />
-            <span className="text-gray-800 font-medium">{product.name}</span>
+            <span className="text-white font-medium">{product.name}</span>
           </div>
         </div>
       </div>
 
       {/* Product Detail */}
-      <section className="bg-white section-padding">
+      <section className="bg-abdel-card section-padding">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
             {/* Image */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-cream">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-abdel-soft">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -181,10 +181,10 @@ export default function ProductPage() {
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-1">
                   {product.category}
                 </p>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h1 className="text-3xl md:text-4xl font-bold text-white">
                   {product.name}
                 </h1>
-                <p className="text-lg text-gray-500 mt-1">{product.subtitle}</p>
+                <p className="text-lg text-white/55 mt-1">{product.subtitle}</p>
               </div>
 
               <div className="flex items-baseline gap-3">
@@ -199,7 +199,7 @@ export default function ProductPage() {
               {/* Sélecteur de variante */}
               {product.variants && product.variants.length > 0 && (
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-3">Choisir le format</h3>
+                  <h3 className="font-bold text-white mb-3">Choisir le format</h3>
                   <div className="flex flex-wrap gap-2">
                     {product.variants.map((variant, i) => (
                       <button
@@ -207,8 +207,8 @@ export default function ProductPage() {
                         onClick={() => setSelectedVariant(variant)}
                         className={`px-5 py-2.5 rounded-full border-2 text-sm font-semibold transition-all ${
                           selectedVariant?.weight === variant.weight
-                            ? "border-nexora-blue bg-nexora-blue text-white shadow-md"
-                            : "border-sand bg-white text-bark hover:border-nexora-blue hover:bg-nexora-blue/5"
+                            ? "border-abdelstore-blue bg-abdelstore-blue text-white shadow-md"
+                            : "border-abdel-gold/20 bg-abdel-card text-white hover:border-abdelstore-blue hover:bg-abdelstore-blue/5"
                         }`}
                       >
                         {variant.weight} — {formatPrice(variant.price)}
@@ -218,16 +218,16 @@ export default function ProductPage() {
                 </div>
               )}
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 {product.longDescription}
               </p>
 
               {/* Bienfaits */}
               <div>
-                <h3 className="font-bold text-gray-800 mb-3">Bienfaits</h3>
+                <h3 className="font-bold text-white mb-3">Bienfaits</h3>
                 <ul className="space-y-2">
                   {product.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={i} className="flex items-start gap-2 text-sm text-white/70">
                       <Check size={16} className="text-primary shrink-0 mt-0.5" />
                       {benefit}
                     </li>
@@ -237,8 +237,8 @@ export default function ProductPage() {
 
               {/* Utilisation */}
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Mode d&apos;emploi</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h3 className="font-bold text-white mb-2">Mode d&apos;emploi</h3>
+                <p className="text-sm text-white/70 leading-relaxed">
                   {product.usage}
                 </p>
               </div>
@@ -265,8 +265,8 @@ export default function ProductPage() {
                     onClick={handleAddToCart}
                     className={`flex-1 py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${
                       added
-                        ? "bg-nexora-blue text-white"
-                        : "bg-nexora-blue text-white hover:bg-nexora-blue-dark"
+                        ? "bg-abdelstore-blue text-white"
+                        : "bg-abdelstore-blue text-white hover:bg-abdelstore-blue-dark"
                     }`}
                   >
                     {added ? (
@@ -284,7 +284,7 @@ export default function ProductPage() {
                 </div>
                 <a
                   href={`https://wa.me/221772958443?text=${encodeURIComponent(
-                    `Bonjour Nexora Shop ! Je souhaite commander :\n\n` +
+                    `Bonjour Abdel Store ! Je souhaite commander :\n\n` +
                     `Produit : ${product.name} (${product.subtitle})\n` +
                     `Format : ${activeWeight}\n` +
                     `Quantité : ${quantity}\n` +
@@ -294,7 +294,7 @@ export default function ProductPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 bg-nexora-blue text-white hover:bg-nexora-blue-dark transition-colors shadow-md"
+                  className="w-full py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2 bg-abdelstore-blue text-white hover:bg-abdelstore-blue-dark transition-colors shadow-md"
                 >
                   <MessageCircle size={18} />
                   Commander sur WhatsApp
@@ -307,9 +307,9 @@ export default function ProductPage() {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="bg-beige section-padding">
+        <section className="bg-abdel-soft section-padding">
           <div className="container-custom">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
               Vous aimerez aussi
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

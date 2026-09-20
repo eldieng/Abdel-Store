@@ -21,7 +21,7 @@ const geistSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Montres, Oraimo & Accessoires Tech à Dakar`,
+    default: `${SITE_NAME} | Montres, Oraimo & Accessoires Premium à Dakar`,
     template: `%s | ${SITE_NAME} Dakar`,
   },
   description: DEFAULT_DESCRIPTION,
@@ -29,33 +29,29 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
-  },
+  formatDetection: { telephone: true, email: true, address: true },
   openGraph: {
     type: "website",
     locale: SITE_LOCALE,
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Accessoires Tech à Dakar, Sénégal`,
+    title: `${SITE_NAME} | Accessoires Premium à Dakar, Sénégal`,
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: "/images/logo-nexora.png",
+        url: "/images/logo-abdel-store.png",
         width: 1200,
-        height: 630,
-        alt: "Nexora Shop — boutique tech à Dakar",
+        height: 1200,
+        alt: "Abdel Store — boutique premium à Dakar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Tech à Dakar`,
+    title: `${SITE_NAME} | Tech Premium à Dakar`,
     description:
       "Montres connectées, Oraimo, chargeurs et power banks. Livraison à Dakar et au Sénégal.",
-    images: ["/images/logo-nexora.png"],
+    images: ["/images/logo-abdel-store.png"],
   },
   robots: {
     index: true,
@@ -70,10 +66,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
-    languages: {
-      "fr-SN": SITE_URL,
-      fr: SITE_URL,
-    },
+    languages: { "fr-SN": SITE_URL, fr: SITE_URL },
   },
   category: "shopping",
   other: {
@@ -93,8 +86,8 @@ const jsonLd = {
       name: SITE_NAME,
       description: DEFAULT_DESCRIPTION,
       url: SITE_URL,
-      logo: `${SITE_URL}/images/logo-nexora.png`,
-      image: `${SITE_URL}/images/logo-nexora.png`,
+      logo: `${SITE_URL}/images/logo-abdel-store.png`,
+      image: `${SITE_URL}/images/logo-abdel-store.png`,
       telephone: LOCAL_SEO.phone,
       email: LOCAL_SEO.email,
       address: {
@@ -111,12 +104,8 @@ const jsonLd = {
       },
       areaServed: [
         { "@type": "City", name: "Dakar" },
-        { "@type": "AdministrativeArea", name: "Dakar" },
         { "@type": "Country", name: "Sénégal" },
         { "@type": "Place", name: "Sicap Mbao" },
-        { "@type": "Place", name: "Pikine" },
-        { "@type": "Place", name: "Guédiawaye" },
-        { "@type": "Place", name: "Rufisque" },
       ],
       priceRange: "$$",
       currenciesAccepted: "XOF",
@@ -137,51 +126,6 @@ const jsonLd = {
         },
       ],
       availableLanguage: ["French", "Wolof"],
-      knowsAbout: [
-        "montres connectées",
-        "écouteurs Oraimo",
-        "power banks",
-        "chargeurs USB-C",
-        "accessoires high-tech Dakar",
-      ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Catalogue Nexora Shop Dakar",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Product",
-              name: "Montres connectées",
-              category: "Montres",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Product",
-              name: "Écouteurs Oraimo",
-              category: "Audio",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Product",
-              name: "Chargeurs Oraimo",
-              category: "Chargeurs",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Product",
-              name: "Power banks Oraimo",
-              category: "Power Banks",
-            },
-          },
-        ],
-      },
     },
     {
       "@type": "WebSite",
@@ -190,11 +134,6 @@ const jsonLd = {
       name: SITE_NAME,
       inLanguage: "fr-SN",
       publisher: { "@id": `${SITE_URL}/#business` },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${SITE_URL}/boutique?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
     },
   ],
 };
@@ -212,7 +151,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${geistSans.variable} font-body antialiased`}>
+      <body className={`${geistSans.variable} font-body antialiased bg-black text-white`}>
         <Header />
         <main className="min-h-screen pt-16">{children}</main>
         <Footer />

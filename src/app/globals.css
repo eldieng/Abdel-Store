@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #F5F6FB;
-  --foreground: #0F1117;
-  --nexora-blue: #444D9C;
+  --background: #0A0A0A;
+  --foreground: #F5F5F5;
+  --abdel-gold: #DAA43E;
 }
 
 body {
@@ -28,16 +28,16 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-nexora-blue text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-olive-dark transition-all duration-300 inline-flex items-center gap-2 shadow-md hover:shadow-lg;
+    @apply bg-abdel-gold text-black px-7 py-3.5 rounded-xl font-semibold hover:bg-abdel-goldLight transition-all duration-300 inline-flex items-center gap-2 shadow-md hover:shadow-lg hover:shadow-abdel-gold/20;
   }
   .btn-secondary {
-    @apply bg-nexora-black text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-secondary-light transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-white text-black px-7 py-3.5 rounded-xl font-semibold hover:bg-white/90 transition-all duration-300 inline-flex items-center gap-2;
   }
   .btn-outline {
-    @apply border-2 border-nexora-blue text-nexora-blue px-7 py-3.5 rounded-xl font-semibold hover:bg-nexora-blue hover:text-white transition-all duration-300 inline-flex items-center gap-2;
+    @apply border-2 border-abdel-gold text-abdel-gold px-7 py-3.5 rounded-xl font-semibold hover:bg-abdel-gold hover:text-black transition-all duration-300 inline-flex items-center gap-2;
   }
   .btn-accent {
-    @apply bg-accent text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-accent-dark transition-all duration-300 inline-flex items-center gap-2 shadow-md;
+    @apply bg-abdel-goldLight text-black px-7 py-3.5 rounded-xl font-semibold hover:bg-abdel-gold transition-all duration-300 inline-flex items-center gap-2 shadow-md;
   }
   .section-padding {
     @apply py-16 md:py-24 px-4 md:px-8;

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "acheter power bank dakar",
   ],
   openGraph: {
-    title: "Boutique Nexora Shop — Accessoires Tech à Dakar",
+    title: "Boutique Abdel Store — Accessoires Tech à Dakar",
     description:
       "Catalogue montres, audio Oraimo, chargeurs et power banks. Livraison à Dakar et au Sénégal.",
   },

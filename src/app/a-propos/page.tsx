@@ -7,40 +7,40 @@ export default function AProposPage() {
   return (
     <>
       {/* Banner */}
-      <section className="bg-gradient-to-r from-nexora-black to-nexora-blue text-white py-16 md:py-20">
+      <section className="bg-gradient-to-r from-abdelstore-black to-abdelstore-blue text-white py-16 md:py-20">
         <div className="container-custom px-4 md:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            À Propos de Nexora Shop
+            À Propos de Abdel Store
           </h1>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+          <p className="text-abdel-gold/80 text-lg max-w-2xl mx-auto">
             Accessoires high-tech sélectionnés pour Dakar et le Sénégal
           </p>
         </div>
       </section>
 
       {/* Story */}
-      <section className="bg-white section-padding">
+      <section className="bg-abdel-card section-padding">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">
                 Notre histoire
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Née au coeur du Sénégal
               </h2>
-              <p className="text-gray-600 leading-relaxed">
-                Nexora Shop est née d&apos;une envie simple : rendre la tech accessible
+              <p className="text-white/70 leading-relaxed">
+                Abdel Store est née d&apos;une envie simple : rendre la tech accessible
                 à Dakar. Basée à Sicap Mbao, notre boutique propose des
                 accessoires sélectionnés — montres, audio Oraimo, charge et power banks.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Chaque produit que nous proposons est choisi pour son rapport
                 qualité-prix et sa fiabilité au quotidien. Des montres connectées
                 aux écouteurs Oraimo, nous sélectionnons les
                 meilleurs produits pour votre quotidien.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Notre mission est simple : rendre accessible à tous les
                 meilleurs accessoires high-tech, avec un service de proximité
                 et des prix à valider avec le propriétaire.
@@ -49,14 +49,14 @@ export default function AProposPage() {
             <div className="grid grid-cols-2 gap-4">
               <Image
                 src="/images/oraimo-spacebud.jpeg"
-                alt="Audio Nexora Shop"
+                alt="Audio Abdel Store"
                 width={300}
                 height={400}
                 className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
               />
               <Image
                 src="/images/montre-or-milanais.jpeg"
-                alt="Montre Nexora Shop"
+                alt="Montre Abdel Store"
                 width={300}
                 height={400}
                 className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] mt-8"
@@ -67,13 +67,13 @@ export default function AProposPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-cream section-padding">
+      <section className="bg-abdel-soft section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Nos valeurs
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
               Ce qui nous guide
             </h2>
           </div>
@@ -103,15 +103,15 @@ export default function AProposPage() {
             ].map((value, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-2xl shadow-sm text-center hover:shadow-md transition-shadow"
+                className="bg-abdel-card p-8 rounded-2xl shadow-black/40 text-center hover:shadow-md transition-shadow"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon size={28} className="text-primary" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                   {value.desc}
                 </p>
               </div>
@@ -121,17 +121,17 @@ export default function AProposPage() {
       </section>
 
       {/* Products showcase */}
-      <section className="bg-white section-padding">
+      <section className="bg-abdel-card section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Nos produits
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
               Des produits tech d&apos;exception
             </h2>
-            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-              Chaque produit Nexora Shop est soigneusement préparé dans notre
+            <p className="text-white/70 mt-3 max-w-2xl mx-auto">
+              Chaque produit Abdel Store est soigneusement préparé dans notre
               atelier de Dakar, avec les meilleurs ingrédients du Sénégal.
             </p>
           </div>
@@ -153,7 +153,7 @@ export default function AProposPage() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <p className="font-medium text-gray-800 text-sm">
+                <p className="font-medium text-white text-sm">
                   {product.name}
                 </p>
               </div>
