@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Phone, Mail, Send, MessageCircle } from "lucide-react";
+import { LOCAL_SEO } from "@/lib/seo";
 
 const fieldClass =
   "w-full px-4 py-3 bg-black border border-abdel-gold/30 rounded-xl text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-abdel-gold focus:border-abdel-gold";
@@ -32,7 +33,7 @@ export default function ContactPage() {
             Contact <span className="text-abdel-gold">Abdel Store</span> — Dakar
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Sicap Mbao · WhatsApp, téléphone ou email · Livraison Dakar &amp; Sénégal
+            Parcelle Assainie U8 · WhatsApp, téléphone ou email · Livraison Dakar &amp; Sénégal
           </p>
         </div>
       </section>
@@ -49,9 +50,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white mb-1">Adresse</h3>
                     <p className="text-sm text-white/60">
-                      Sicap Mbao, Dakar
+                      Dakar, Parcelle Assainie U8
                       <br />
-                      Sénégal
+                      Sénégal (Case Bah)
                     </p>
                   </div>
                 </div>
@@ -64,26 +65,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-1">Téléphone</h3>
-                    <div className="text-sm text-white/60 space-y-1">
-                      <a
-                        href="tel:+221772958443"
-                        className="block hover:text-abdel-gold transition-colors"
-                      >
-                        +221 77 295 84 43
-                      </a>
-                      <a
-                        href="tel:+221761617169"
-                        className="block hover:text-abdel-gold transition-colors"
-                      >
-                        +221 76 161 71 69
-                      </a>
-                      <a
-                        href="tel:+221775432218"
-                        className="block hover:text-abdel-gold transition-colors"
-                      >
-                        +221 77 543 22 18
-                      </a>
-                    </div>
+                    <a
+                      href={`tel:${LOCAL_SEO.phone}`}
+                      className="text-sm text-white/60 hover:text-abdel-gold transition-colors"
+                    >
+                      {LOCAL_SEO.phoneDisplay}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -96,10 +83,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white mb-1">Email</h3>
                     <a
-                      href="mailto:contact@abdelstore.sn"
-                      className="text-sm text-white/60 hover:text-abdel-gold transition-colors"
+                      href={`mailto:${LOCAL_SEO.email}`}
+                      className="text-sm text-white/60 hover:text-abdel-gold transition-colors break-all"
                     >
-                      contact@abdelstore.sn
+                      {LOCAL_SEO.email}
                     </a>
                   </div>
                 </div>
@@ -117,7 +104,7 @@ export default function ContactPage() {
                       rapide
                     </p>
                     <a
-                      href="https://wa.me/221772958443"
+                      href={`https://wa.me/${LOCAL_SEO.whatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-abdel-gold text-black px-4 py-2 rounded-xl text-sm font-semibold hover:bg-abdel-goldLight transition-colors"

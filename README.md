@@ -1,6 +1,6 @@
 # Abdel Store
 
-Boutique premium high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks.
+Boutique premium high-tech à Dakar (Parcelle Assainie U8) : montres connectées, écouteurs Oraimo, chargeurs et power banks.
 
 ## Stack
 
@@ -23,4 +23,4 @@ npm run dev
 
 ## SEO
 
-Config locale dans `src/lib/seo.ts` (URL prévue : `https://abdelstore.sn`).
+Config locale dans `src/lib/seo.ts` (URL : `https://abdel-store.com`).

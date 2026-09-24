@@ -92,7 +92,7 @@ const jsonLd = {
       email: LOCAL_SEO.email,
       address: {
         "@type": "PostalAddress",
-        streetAddress: LOCAL_SEO.neighborhood,
+        streetAddress: LOCAL_SEO.streetAddress,
         addressLocality: LOCAL_SEO.city,
         addressRegion: LOCAL_SEO.region,
         addressCountry: LOCAL_SEO.countryCode,
@@ -105,7 +105,7 @@ const jsonLd = {
       areaServed: [
         { "@type": "City", name: "Dakar" },
         { "@type": "Country", name: "Sénégal" },
-        { "@type": "Place", name: "Sicap Mbao" },
+        { "@type": "Place", name: LOCAL_SEO.neighborhood },
       ],
       priceRange: "$$",
       currenciesAccepted: "XOF",

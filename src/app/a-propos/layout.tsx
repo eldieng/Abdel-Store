@@ -4,10 +4,10 @@ import { SITE_URL } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "À propos — Boutique Tech à Dakar",
   description:
-    "Abdel Store est une boutique d'accessoires high-tech à Dakar (Sicap Mbao) : montres connectées, écouteurs Oraimo, chargeurs et power banks pour le Sénégal.",
+    "Abdel Store est une boutique d'accessoires high-tech à Dakar (Parcelle Assainie U8) : montres connectées, écouteurs Oraimo, chargeurs et power banks pour le Sénégal.",
   keywords: [
     "abdel store dakar",
-    "boutique tech sicap mbao",
+    "boutique tech parcelle assainie",
     "accessoires high-tech sénégal",
     "histoire abdel store",
   ],

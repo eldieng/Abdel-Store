@@ -219,6 +219,7 @@ export default function AdminPage() {
                         alt="Aperçu"
                         fill
                         className="object-cover"
+                        sizes="128px"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
@@ -623,6 +624,7 @@ export default function AdminPage() {
                     alt={product.name}
                     fill
                     className="object-cover"
+                    sizes="64px"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -709,6 +711,7 @@ export default function AdminPage() {
                             alt={product.name}
                             fill
                             className="object-cover"
+                            sizes="48px"
                           />
                         </div>
                         <div>

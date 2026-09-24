@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, ShoppingBag } from "lucide-react";
+import { LOCAL_SEO } from "@/lib/seo";
 
 export default function Footer() {
   return (
@@ -94,34 +95,29 @@ export default function Footer() {
                   <MapPin size={14} className="text-abdel-gold" />
                 </div>
                 <span className="text-white/55 text-sm">
-                  Sicap Mbao, Dakar, Sénégal
+                  {LOCAL_SEO.addressDisplay}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-abdel-gold/15 border border-abdel-gold/30 flex items-center justify-center shrink-0">
                   <Phone size={14} className="text-abdel-gold" />
                 </div>
-                <div className="text-white/55 text-sm space-y-0.5">
-                  <a href="tel:+221772958443" className="block hover:text-abdel-gold transition-colors">
-                    +221 77 295 84 43
-                  </a>
-                  <a href="tel:+221761617169" className="block hover:text-abdel-gold transition-colors">
-                    +221 76 161 71 69
-                  </a>
-                  <a href="tel:+221775432218" className="block hover:text-abdel-gold transition-colors">
-                    +221 77 543 22 18
-                  </a>
-                </div>
+                <a
+                  href={`tel:${LOCAL_SEO.phone}`}
+                  className="text-white/55 text-sm hover:text-abdel-gold transition-colors"
+                >
+                  {LOCAL_SEO.phoneDisplay}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-abdel-gold/15 border border-abdel-gold/30 flex items-center justify-center shrink-0">
                   <Mail size={14} className="text-abdel-gold" />
                 </div>
                 <a
-                  href="mailto:contact@abdelstore.sn"
-                  className="text-white/55 text-sm hover:text-abdel-gold transition-colors"
+                  href={`mailto:${LOCAL_SEO.email}`}
+                  className="text-white/55 text-sm hover:text-abdel-gold transition-colors break-all"
                 >
-                  contact@abdelstore.sn
+                  {LOCAL_SEO.email}
                 </a>
               </li>
             </ul>
@@ -135,7 +131,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Abdel Store. Tous droits réservés.
           </p>
           <p className="text-abdel-gold/50 text-xs tracking-wide">
-            Sicap Mbao, Dakar · Livraison au Sénégal
+            Parcelle Assainie U8, Dakar · Livraison au Sénégal
           </p>
         </div>
       </div>

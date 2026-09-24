@@ -67,6 +67,7 @@ export default function Home() {
                   fill
                   className="object-cover rounded-3xl shadow-2xl"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -253,7 +254,7 @@ export default function Home() {
           <div className="prose prose-gray mx-auto text-white/70 leading-relaxed space-y-4 text-center md:text-left">
             <p>
               <strong>Abdel Store</strong> est votre boutique d&apos;accessoires
-              high-tech à <strong>Dakar</strong> (Sicap Mbao). Nous proposons des{" "}
+              high-tech à <strong>Dakar</strong> (Parcelle Assainie U8). Nous proposons des{" "}
               <strong>montres connectées</strong>, des{" "}
               <strong>écouteurs Oraimo</strong> (OpenBuds, SpaceBud), des{" "}
               <strong>chargeurs rapides</strong> et des{" "}

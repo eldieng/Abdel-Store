@@ -20,6 +20,7 @@ import {
   formatPrice,
   CartItem,
 } from "@/lib/cart";
+import { LOCAL_SEO } from "@/lib/seo";
 
 export default function PanierPage() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -58,7 +59,7 @@ export default function PanierPage() {
     const total = getCartTotal(cart);
     const fullMessage = `Bonjour Abdel Store ! Je souhaite commander :\n\n${message}\n\nTotal : ${formatPrice(total)}\n\nMerci !`;
     const encoded = encodeURIComponent(fullMessage);
-    window.open(`https://wa.me/?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/${LOCAL_SEO.whatsapp}?text=${encoded}`, "_blank");
   };
 
   if (cart.length === 0) {
@@ -110,6 +111,7 @@ export default function PanierPage() {
                       alt={item.name}
                       fill
                       className="object-cover"
+                      sizes="80px"
                     />
                   </div>
                   <div className="flex-1 min-w-0">

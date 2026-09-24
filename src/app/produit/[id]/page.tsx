@@ -17,6 +17,7 @@ import {
 import { fetchProducts, Product, Variant } from "@/lib/products";
 import { addToCart, formatPrice } from "@/lib/cart";
 import ProductCard from "@/components/ProductCard";
+import { LOCAL_SEO, SITE_URL } from "@/lib/seo";
 
 export default function ProductPage() {
   const params = useParams();
@@ -83,8 +84,8 @@ export default function ProductPage() {
     "@type": "Product",
     name: product.name,
     description: product.longDescription,
-    image: `https://abdelstore.sn${product.image}`,
-    url: `https://abdelstore.sn/produit/${product.id}`,
+    image: `${SITE_URL}${product.image}`,
+    url: `${SITE_URL}/produit/${product.id}`,
     sku: product.id,
     brand: {
       "@type": "Brand",
@@ -99,7 +100,7 @@ export default function ProductPage() {
           availability: product.inStock
             ? "https://schema.org/InStock"
             : "https://schema.org/OutOfStock",
-          url: `https://abdelstore.sn/produit/${product.id}`,
+          url: `${SITE_URL}/produit/${product.id}`,
           seller: { "@type": "Organization", name: "Abdel Store" },
           areaServed: ["Dakar", "Sénégal"],
           description: `${product.name} - ${v.weight}`,
@@ -111,7 +112,7 @@ export default function ProductPage() {
           availability: product.inStock
             ? "https://schema.org/InStock"
             : "https://schema.org/OutOfStock",
-          url: `https://abdelstore.sn/produit/${product.id}`,
+          url: `${SITE_URL}/produit/${product.id}`,
           seller: { "@type": "Organization", name: "Abdel Store" },
           areaServed: ["Dakar", "Sénégal"],
         },
@@ -121,9 +122,9 @@ export default function ProductPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://abdelstore.sn" },
-      { "@type": "ListItem", position: 2, name: "Boutique", item: "https://abdelstore.sn/boutique" },
-      { "@type": "ListItem", position: 3, name: product.name, item: `https://abdelstore.sn/produit/${product.id}` },
+      { "@type": "ListItem", position: 1, name: "Accueil", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Boutique", item: `${SITE_URL}/boutique` },
+      { "@type": "ListItem", position: 3, name: product.name, item: `${SITE_URL}/produit/${product.id}` },
     ],
   };
 
@@ -283,7 +284,7 @@ export default function ProductPage() {
                   </button>
                 </div>
                 <a
-                  href={`https://wa.me/221772958443?text=${encodeURIComponent(
+                  href={`https://wa.me/${LOCAL_SEO.whatsapp}?text=${encodeURIComponent(
                     `Bonjour Abdel Store ! Je souhaite commander :\n\n` +
                     `Produit : ${product.name} (${product.subtitle})\n` +
                     `Format : ${activeWeight}\n` +

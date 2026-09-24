@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Menu, X, User, Phone } from "lucide-react";
 import { getCart, getCartCount } from "@/lib/cart";
+import { LOCAL_SEO } from "@/lib/seo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,11 +45,11 @@ export default function Header() {
           </span>
           <div className="flex items-center gap-4">
             <a
-              href="tel:+221772958443"
+              href={`tel:${LOCAL_SEO.phone}`}
               className="flex items-center gap-1 text-abdel-gold/80 hover:text-abdel-goldLight transition-colors"
             >
               <Phone size={12} />
-              +221 77 295 84 43
+              {LOCAL_SEO.phoneDisplay}
             </a>
             <Link
               href="/admin"

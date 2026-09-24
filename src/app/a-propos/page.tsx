@@ -31,7 +31,7 @@ export default function AProposPage() {
               </h2>
               <p className="text-white/70 leading-relaxed">
                 Abdel Store est née d&apos;une envie simple : rendre la tech accessible
-                à Dakar. Basée à Sicap Mbao, notre boutique propose des
+                à Dakar. Basée à Parcelle Assainie U8 (Case Bah), notre boutique propose des
                 accessoires sélectionnés — montres, audio Oraimo, charge et power banks.
               </p>
               <p className="text-white/70 leading-relaxed">
@@ -151,6 +151,7 @@ export default function AProposPage() {
                     alt={product.name}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 20vw"
                   />
                 </div>
                 <p className="font-medium text-white text-sm">
